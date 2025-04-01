@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../font/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../font/Outfit-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../font/Lora-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: gteestiprodisplay;
+    src: url('../font/gteestiprodisplay.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: GraphikLCG;
+    src: url('../font/GraphikLCG.woff') format('woff');
+}
+
+body,
+head {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+img,
+ul,
+li,
+a,
+p,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+}

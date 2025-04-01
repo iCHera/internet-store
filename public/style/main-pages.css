@@ -1,0 +1,301 @@
+@media(max-width: 1920px) {
+
+    /* ШАКПКА */
+
+    .header {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+        background-color: white;
+    }
+
+    .header-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .site-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-logo {
+        font-family: Outfit;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 100%;
+        text-align: left;
+        padding-bottom: 3px;
+    }
+
+    .sertch {
+        max-width: 700px;
+        width: 100%;
+        display: flex;
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        margin: 0 5px 0 10px;
+    }
+
+    .sertch-input {
+        max-width: 670px;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0 10px;
+        font-family: Outfit;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .sertch-button {
+        background: none;
+        border: none;
+    }
+
+    .sertch-button-icon {
+        width: 30px;
+        height: 30px;
+        padding-top: 4px;
+    }
+
+    .header-list {
+        display: flex;
+    }
+
+    .header-list-li-shop {
+        background: none;
+        border: none;
+        padding: 0 5px;
+    }
+
+    .header-list-li-shop:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .header-list-li-shop-icon {
+        padding-top: 7px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .header-list-li-user {
+        padding: 0 5px;
+        background: none;
+        border: none;
+    }
+
+    .header-list-li-user:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .header-list-li-user-icon {
+        padding-top: 3px;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* КАТАЛОГ */
+
+
+    .section-catalog {
+        padding: 10px;
+        margin-top: 65px;
+    }
+
+    .section-catalog-div {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .catalog-ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .catalog-li-a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog-li-a:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .catalog-li-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .catalog-li-text {
+        padding-top: 5px;
+        font-family: Nunito, sans-serif;
+        font-size: 15px;
+        font-weight: 370;
+    }
+
+    /* СПИСОК ТОВАРОВ  */
+
+    .section-goods {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .goods-div {
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .goods-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .goods-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    .goods-list:hover{
+        transform: scale(1.02);
+        transition: 0.7s;
+    }
+
+    .goods-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .goods-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .goods-name {
+        font-family: GraphikLCG;
+        font-weight: 0;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .goods-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .goods-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .goods-list:hover .li-icon-shop {
+        opacity: 1;
+    }
+
+}
+
+@media(max-width: 1367px) {
+
+    /* СПИСОК ТОВАРОВ */
+
+    .goods-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    /* КАТАЛОГ */
+
+    .catalog-ul {
+        gap: 25px;
+        overflow-x: scroll;
+        scrollbar-color: rgba(190, 200, 199) white;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 7px;
+    }
+
+    .goods-list:hover{
+        transform: none;
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .catalog-li-photo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .catalog-li-text {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    /* СПИСОК ТОВАРОВ */
+
+    .section-goods {
+        margin-top: 0px;
+        padding-top: 5px;
+    }
+
+    .goods-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .li-icon-shop {
+        opacity: 1;
+    }
+
+}
