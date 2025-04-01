@@ -106,7 +106,7 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                 <h1 class="goods-name"><?php echo $data['name']; ?></h1>
                                 <p class="goods-description"><?php echo $data['shortDescription']; ?></p>
-                                <p class="goods-price"><?= $data['price'] ?> <span class="goods-price-span">BYN</span></p>
+                                <p class="goods-price"><?= $data['price'] ?> <span class="goods-price-span">BYN</span> фывфвфыв</p>
                             </a>
                         </li>  
                     <?php endforeach; ?>
