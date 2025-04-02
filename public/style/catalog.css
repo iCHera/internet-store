@@ -30,8 +30,9 @@
     }
 
     .goods-list:hover{
-        transform: scale(1.02);
+        transform: scale(1.015);
         transition: 0.7s;
+        box-shadow: 5px 5px 15px grey;
     }
 
     .goods-photo {
