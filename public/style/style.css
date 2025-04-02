@@ -14,12 +14,12 @@
 }
 
 @font-face {
-    font-family: gteestiprodisplay;
+    font-family: 'gteestiprodisplay';
     src: url('../font/gteestiprodisplay.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: GraphikLCG;
+    font-family: 'GraphikLCG';
     src: url('../font/GraphikLCG.woff') format('woff');
 }
 

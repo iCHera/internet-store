@@ -12,12 +12,17 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
 
 $new = [];
 
-if ($new = $db->query("SELECT * FROM `goods` WHERE catalog = 'new' AND new = 'yes'")) {
+if ($new = $db->query("SELECT * FROM `goods` WHERE new = 'yes'")) {
     $new = $new->fetchALL(PDO::FETCH_ASSOC);
 } else {
     printf($db->errorInfo());
 }
 
+$xite = [];
+
+if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
+    $xite = $xite->fetchALL(PDO::FETCH_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +39,8 @@ if ($new = $db->query("SELECT * FROM `goods` WHERE catalog = 'new' AND new = 'ye
 </head>
 
 <body>
+    <!-- ШАПКА -->
+     
     <header class="header">
         <div class="header-div">
             <a href="/index.php" class="header-left">
@@ -59,6 +66,9 @@ if ($new = $db->query("SELECT * FROM `goods` WHERE catalog = 'new' AND new = 'ye
     </header>
 
     <main>
+
+        <!-- КАТАЛОГ -->
+
         <section class="section-catalog">
             <div class="section-catalog-div">
                 <ul class="catalog-ul">
@@ -105,39 +115,64 @@ if ($new = $db->query("SELECT * FROM `goods` WHERE catalog = 'new' AND new = 'ye
                 </ul>
             </div>
         </section>
-        <section class="new-products">
-            <div class="new-products-div">
-                <ul class="new-products-ul">
+
+        <!-- НОВЫЕ ТОВАРЫ -->
+
+        <section class="section-new">
+            <div class="header-new">
+                <h1 class="new-text">НОВИНКИ</h1>
+                <div class="div-slider">
+                    <button class="slider-button-back-new button-slider-all"><img src="../image/slider/back.png" alt="back"
+                            class="back-slider slider"></button>
+                    <button class="slider-button-next-new button-slider-all"><img src="../image/slider/next.png" alt="back"
+                            class="next-slider slider"></button>
+                </div>
+            </div>
+            <div class="new-div">
+                <ul class="new-items">
                     <?php foreach ($new as $data): ?>
-                    <li class= "new-products-li">
-                        <a href="" class="new-products-carts">
-                            <img src="<?= $data['image']; ?>" alt="photo" class="new-products-photo">
-                            <h1 class="new-products-name"><?= $data['name']; ?></h1>
-                            <p class="new-products-description"><?= $data['shortDescription']; ?></p>
-                            <p class="new-products-price"><?= $data['price'] ?> <span class="new-products-price-span">BYN</span></p>
-                        </a>
-                    </li> 
+                        <li class="new-list">
+                            <a href="" class="new-items-text">
+                                <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
+                                <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                <h1 class="new-name"><?php echo $data['name']; ?></h1>
+                                <p class="new-description"><?php echo $data['shortDescription']; ?></p>
+                                <p class="new-price"><?= $data['price'] ?> <span class="new-price-span">BYN</span></p>
+                            </a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
         </section>
-        <!-- <section class="section-goods">
-            <div class="goods-div">
-                <ul class="goods-items">
-                    <?php foreach ($info as $data): ?>
-                        <li class="goods-list">
-                            <a href="" class="goods-items-text">
-                                <img src="<?php echo $data['image']; ?>" alt="photo" class="goods-photo">
+
+        <!-- ХИТЫ ТОВАРОВ -->
+
+        <section class="section-xiet">
+            <div class="header-xite">
+                <h1 class="xite-text">ХИТЫ</h1>
+                <div class="div-slider">
+                    <button class="slider-button-back button-slider-all"><img src="../image/slider/back.png" alt="back"
+                            class="back-slider slider"></button>
+                    <button class="slider-button-next button-slider-all"><img src="../image/slider/next.png" alt="back"
+                            class="next-slider slider"></button>
+                </div>
+            </div>
+            <div class="new-div">
+                <ul class="new-items">
+                    <?php foreach ($xite as $data): ?>
+                        <li class="new-list">
+                            <a href="" class="new-items-text">
+                                <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
-                                <h1 class="goods-name"><?php echo $data['name']; ?></h1>
-                                <p class="goods-description"><?php echo $data['shortDescription']; ?></p>
-                                <p class="goods-price"><?= $data['price'] ?> <span class="goods-price-span">BYN</span></p>
+                                <h1 class="new-name"><?php echo $data['name']; ?></h1>
+                                <p class="new-description"><?php echo $data['shortDescription']; ?></p>
+                                <p class="new-price"><?= $data['price'] ?> <span class="new-price-span">BYN</span></p>
                             </a>
-                        </li>  
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
-        </section> -->
+        </section>
     </main>
     <script src="js/main.js"></script>
 </body>

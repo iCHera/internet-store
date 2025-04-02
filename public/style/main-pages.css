@@ -112,7 +112,6 @@
 
     /* КАТАЛОГ */
 
-
     .section-catalog {
         padding: 10px;
         margin-top: 65px;
@@ -151,11 +150,140 @@
         font-weight: 370;
     }
 
+    /* НОВИНКИ */
+
+            /* СЛАЙДЕР */
+
+    .section-new {
+        padding: 10px;
+    }
+
+    .header-new {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;  
+        justify-content: space-between;
+    }
+
+    .new-text {
+        padding-left: 10px;
+        padding-top: 6px;
+        letter-spacing: 5px;
+        font-family: Outfit;
+        font-weight: 700;
+    }
+
+    .div-slider {
+        display: flex;
+        gap: 20px;
+    }
+
+    .button-slider-all {
+        border: none;
+        background: none;
+    }
+
+    .slider-button-back {}
+
+    .back-slider {}
+
+    .slider {
+        width: 40px;
+        height: 40px;
+    }
+
+            /* ТОВАРЫ */
+
+    
+    .new-div {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .new-items {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .new-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    .new-list:hover {
+        /* transform: scale(1.015); */
+        transition: 0.7s;
+        box-shadow: 5px 5px 15px grey;
+    }
+
+    .new-photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    .new-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .new-name {
+        font-family: GraphikLCG;
+        font-weight: 0;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .new-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .new-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .new-list:hover .li-icon-shop {
+        opacity: 1;
+    }
+
+
 }
 
-@media(max-width: 1367px) {
-
-}
+@media(max-width: 1367px) {}
 
 @media(max-width: 768px) {
 
@@ -169,7 +297,7 @@
         padding-bottom: 7px;
     }
 
-    .goods-list:hover{
+    .goods-list:hover {
         transform: none;
     }
 
