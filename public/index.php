@@ -10,6 +10,14 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
     printf($query->errorInfo());
 }
 
+$new = [];
+
+if ($new = $db->query("SELECT * FROM `goods` WHERE catalog = 'new' AND new = 'yes'")) {
+    $new = $new->fetchALL(PDO::FETCH_ASSOC);
+} else {
+    printf($db->errorInfo());
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +105,23 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
                 </ul>
             </div>
         </section>
-        <section class="section-goods">
+        <section class="new-products">
+            <div class="new-products-div">
+                <ul class="new-products-ul">
+                    <?php foreach ($new as $data): ?>
+                    <li class= "new-products-li">
+                        <a href="" class="new-products-carts">
+                            <img src="<?= $data['image']; ?>" alt="photo" class="new-products-photo">
+                            <h1 class="new-products-name"><?= $data['name']; ?></h1>
+                            <p class="new-products-description"><?= $data['shortDescription']; ?></p>
+                            <p class="new-products-price"><?= $data['price'] ?> <span class="new-products-price-span">BYN</span></p>
+                        </a>
+                    </li> 
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </section>
+        <!-- <section class="section-goods">
             <div class="goods-div">
                 <ul class="goods-items">
                     <?php foreach ($info as $data): ?>
@@ -113,7 +137,7 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
                     <?php endforeach; ?>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
     <script src="js/main.js"></script>
 </body>
