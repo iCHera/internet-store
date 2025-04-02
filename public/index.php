@@ -40,7 +40,7 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
 
 <body>
     <!-- ШАПКА -->
-     
+
     <header class="header">
         <div class="header-div">
             <a href="/index.php" class="header-left">
@@ -121,7 +121,7 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
         <section class="section-new">
             <div class="header-new">
                 <h1 class="new-text">НОВИНКИ</h1>
-                <div class="div-slider">
+                <div class="div-slider-new">
                     <button class="slider-button-back-new button-slider-all"><img src="../image/slider/back.png" alt="back"
                             class="back-slider slider"></button>
                     <button class="slider-button-next-new button-slider-all"><img src="../image/slider/next.png" alt="back"
@@ -147,21 +147,21 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
 
         <!-- ХИТЫ ТОВАРОВ -->
 
-        <section class="section-xiet">
+        <section class="section-xite">
             <div class="header-xite">
                 <h1 class="xite-text">ХИТЫ</h1>
-                <div class="div-slider">
-                    <button class="slider-button-back button-slider-all"><img src="../image/slider/back.png" alt="back"
+                <div class="div-slider-xite">
+                    <button class="slider-button-back-xite button-slider-all"><img src="../image/slider/back.png" alt="back"
                             class="back-slider slider"></button>
-                    <button class="slider-button-next button-slider-all"><img src="../image/slider/next.png" alt="back"
+                    <button class="slider-button-next-xite button-slider-all"><img src="../image/slider/next.png" alt="back"
                             class="next-slider slider"></button>
                 </div>
             </div>
-            <div class="new-div">
-                <ul class="new-items">
+            <div class="xite-div">
+                <ul class="xite-items">
                     <?php foreach ($xite as $data): ?>
-                        <li class="new-list">
-                            <a href="" class="new-items-text">
+                        <li class="xite-list">
+                            <a href="" class="xite-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                 <h1 class="new-name"><?php echo $data['name']; ?></h1>

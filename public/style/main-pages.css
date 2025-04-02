@@ -173,7 +173,7 @@
         font-weight: 700;
     }
 
-    .div-slider {
+    .div-slider-new {
         display: flex;
         gap: 20px;
     }
@@ -182,10 +182,6 @@
         border: none;
         background: none;
     }
-
-    .slider-button-back {}
-
-    .back-slider {}
 
     .slider {
         width: 40px;
@@ -206,17 +202,17 @@
         display: flex;
         gap: 20px;
         transition: transform 0.8s ease-in-out;
+        padding: 5px 0 20px 0;
     }
 
     .new-list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom: 10px;
     }
 
     .new-list:hover {
-        /* transform: scale(1.015); */
+        transform: scale(1.015);
         transition: 0.7s;
         box-shadow: 5px 5px 15px grey;
     }
@@ -280,7 +276,132 @@
         opacity: 1;
     }
 
+    /* ХИТЫ */
 
+               /* СЛАЙДЕР */
+
+    .section-xite {
+        padding: 10px;
+    }
+
+    .header-xite {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;  
+        justify-content: space-between;
+    }
+
+    .xite-text {
+        padding-left: 10px;
+        padding-top: 6px;
+        letter-spacing: 5px;
+        font-family: Outfit;
+        font-weight: 700;
+    }
+
+    .div-slider-xite {
+        display: flex;
+        gap: 20px;
+    }
+
+    .button-slider-all {
+        border: none;
+        background: none;
+    }
+
+    .slider {
+        width: 40px;
+        height: 40px;
+    }
+
+            /* ТОВАРЫ */
+
+    
+    .xite-div {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .xite-items {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .xite-items {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.8s ease-in-out;
+        padding: 5px 0 20px 0;
+    }
+
+    .xite-list:hover {
+        transform: scale(1.015);
+        transition: 0.7s;
+        box-shadow: 5px 5px 15px grey;
+    }
+
+    .xite-photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    .xite-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .xite-name {
+        font-family: GraphikLCG;
+        font-weight: 0;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .xite-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .xite-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .xite-list:hover .li-icon-shop {
+        opacity: 1;
+    }
+    
 }
 
 @media(max-width: 1367px) {}
