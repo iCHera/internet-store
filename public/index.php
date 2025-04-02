@@ -19,8 +19,9 @@ if ($query = $db->query("SELECT * FROM `goods`")) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/header/icon-site.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/main-pages.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/main-pages.css">
+    <link rel="stylesheet" href="../style/catalog.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Rizo Store</title>
 </head>
 

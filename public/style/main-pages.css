@@ -151,105 +151,9 @@
         font-weight: 370;
     }
 
-    /* СПИСОК ТОВАРОВ  */
-
-    .section-goods {
-        margin-top: 10px;
-        padding: 10px;
-    }
-
-    .goods-div {
-        max-width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-
-    .goods-items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .goods-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 10px;
-    }
-
-    .goods-list:hover{
-        transform: scale(1.02);
-        transition: 0.7s;
-    }
-
-    .goods-photo {
-        width: 100%;
-        height: 100%;
-    }
-
-    .goods-items-text {
-        cursor: default;
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-    }
-
-    .goods-name {
-        font-family: GraphikLCG;
-        font-weight: 0;
-        font-size: 22px;
-        letter-spacing: 1px;
-        line-height: 120%;
-        padding: 0 10px;
-    }
-
-    .goods-description {
-        margin-top: 5px;
-        letter-spacing: 2px;
-        font-family: Loro;
-        font-weight: 200;
-        font-size: 20px;
-        line-height: 100%;
-        padding: 0 10px;
-        color: rgb(97, 97, 97);
-    }
-
-    .goods-price {
-        margin-top: 20px;
-        padding: 0 10px;
-        font-family: gteestiprodisplay;
-        font-weight: 600;
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-
-    .li-icon-shop {
-        width: 25px;
-        height: 25px;
-        margin-top: -25px;
-        margin-right: 20px;
-        align-self: flex-end;
-        opacity: 0;
-        transition: 0.7s;
-        cursor: pointer;
-        background-color: rgb(31, 31, 31);
-        padding: 7px;
-        border-radius: 50%;
-    }
-
-    .goods-list:hover .li-icon-shop {
-        opacity: 1;
-    }
-
 }
 
 @media(max-width: 1367px) {
-
-    /* СПИСОК ТОВАРОВ */
-
-    .goods-items {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
 }
 
@@ -281,21 +185,6 @@
     .catalog-li-text {
         font-size: 13px;
         font-weight: 400;
-    }
-
-    /* СПИСОК ТОВАРОВ */
-
-    .section-goods {
-        margin-top: 0px;
-        padding-top: 5px;
-    }
-
-    .goods-items {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .li-icon-shop {
-        opacity: 1;
     }
 
 }
