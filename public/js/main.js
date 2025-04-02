@@ -23,10 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderButtonNext = document.querySelector('.slider-button-next-new');
 
   let scrollPosition = 0;
-  const itemWidth = newLists[0].offsetWidth + 20; 
+  const itemWidth = newLists[0].offsetWidth + 40; 
+  const visibleItems = Math.floor(newItems.offsetWidth / itemWidth);
 
   sliderButtonNext.addEventListener('click', function() {
-    if (scrollPosition < (newLists.length - 1) * itemWidth) {
+    if (scrollPosition < (newLists.length - visibleItems) * itemWidth) {
       scrollPosition += itemWidth;
       newItems.style.transform = `translateX(-${scrollPosition}px)`;
     }
@@ -36,6 +37,32 @@ document.addEventListener('DOMContentLoaded', function() {
     if (scrollPosition > 0) {
       scrollPosition -= itemWidth;
       newItems.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() { 
+
+  const xiteItems = document.querySelector('.xite-items');
+  const xiteList = document.querySelectorAll('.xite-list');
+  const nextSlide = document.querySelector('.slider-button-next-xite');
+  const backSlide = document.querySelector('.slider-button-back-xite');
+
+  let scrollPoss = 0;
+  const itemWidth = xiteList[0].offsetWidth + 40;
+  const visibleItems = Math.floor(xiteItems.offsetWidth / itemWidth);
+
+  nextSlide.addEventListener('click', function() { 
+    if (scrollPoss < (xiteList.length - visibleItems) * itemWidth) { 
+      scrollPoss += itemWidth;
+      xiteItems.style.transform = `translateX(-${scrollPoss}px)`;
+    }
+  });
+
+  backSlide.addEventListener('click', function() { 
+    if (scrollPoss > 0) { 
+      scrollPoss -= itemWidth;
+      xiteItems.style.transform = `translateX(-${scrollPoss}px)`;
     }
   });
 });

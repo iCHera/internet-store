@@ -119,6 +119,9 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
         <!-- НОВЫЕ ТОВАРЫ -->
 
         <section class="section-new">
+            
+                <!-- СЛАЙДРЕ -->
+
             <div class="header-new">
                 <h1 class="new-text">НОВИНКИ</h1>
                 <div class="div-slider-new">
@@ -128,6 +131,9 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
                             class="next-slider slider"></button>
                 </div>
             </div>
+
+                <!-- ТОВАРЫ -->
+
             <div class="new-div">
                 <ul class="new-items">
                     <?php foreach ($new as $data): ?>
@@ -148,6 +154,9 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
         <!-- ХИТЫ ТОВАРОВ -->
 
         <section class="section-xite">
+
+                <!-- СЛАЙДЕР -->
+
             <div class="header-xite">
                 <h1 class="xite-text">ХИТЫ</h1>
                 <div class="div-slider-xite">
@@ -157,16 +166,19 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
                             class="next-slider slider"></button>
                 </div>
             </div>
+
+                <!-- ТОВАРЫ -->
+
             <div class="xite-div">
                 <ul class="xite-items">
                     <?php foreach ($xite as $data): ?>
                         <li class="xite-list">
                             <a href="" class="xite-items-text">
-                                <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
+                                <img src="<?php echo $data['image']; ?>" alt="photo" class="xite-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
-                                <h1 class="new-name"><?php echo $data['name']; ?></h1>
-                                <p class="new-description"><?php echo $data['shortDescription']; ?></p>
-                                <p class="new-price"><?= $data['price'] ?> <span class="new-price-span">BYN</span></p>
+                                <h1 class="xite-name"><?php echo $data['name']; ?></h1>
+                                <p class="xite-description"><?php echo $data['shortDescription']; ?></p>
+                                <p class="xite-price"><?= $data['price'] ?> <span class="xite-price-span">BYN</span></p>
                             </a>
                         </li>
                     <?php endforeach; ?>
