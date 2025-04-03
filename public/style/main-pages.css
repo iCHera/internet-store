@@ -109,12 +109,74 @@
         height: 30px;
     }
 
+    /* ТЕКСТ С КАРИТНКОЙ HEADER*/
+
+    .header-photo {
+        margin-top: 65px;
+        width: 100%;
+        height: 912px;
+        background-image: url("../image/header/header-photo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+    }
+
+    .header-photo-div {
+        padding-top: 300px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-photo-div-text {
+        padding: 10px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-photo-lozung {
+        font-family: gteestiprodisplay;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 2px;
+        color: rgb(0, 0, 0);
+    }
+
+    .header-photo-discription {
+        padding-top: 20px;
+        font-family: gteestiprodisplay;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 100%;
+        letter-spacing: 1px;
+        color: black;
+        padding-bottom: 20px;
+    }
+
+    .header-photo-button {
+        padding: 10px 30px;
+        background: black;
+        border: 1px solid black;
+        color: white;
+        font-size: 18px;
+        font-family: Nunito;
+        transition: 1s;
+    }
+
+    .header-photo-button:hover {
+        background: white;
+        color: black;
+    }
+
 
     /* КАТАЛОГ */
 
     .section-catalog {
         padding: 10px;
-        margin-top: 65px;
+        margin-top: 5px;
     }
 
     .section-catalog-div {
@@ -152,7 +214,7 @@
 
     /* НОВИНКИ */
 
-            /* СЛАЙДЕР */
+    /* СЛАЙДЕР */
 
     .section-new {
         padding: 10px;
@@ -161,7 +223,7 @@
     .header-new {
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;  
+        display: flex;
         justify-content: space-between;
     }
 
@@ -188,9 +250,9 @@
         height: 40px;
     }
 
-            /* ТОВАРЫ */
+    /* ТОВАРЫ */
 
-    
+
     .new-div {
         max-width: 1200px;
         margin: 0 auto;
@@ -278,7 +340,7 @@
 
     /* ХИТЫ */
 
-               /* СЛАЙДЕР */
+    /* СЛАЙДЕР */
 
     .section-xite {
         padding: 10px;
@@ -287,7 +349,7 @@
     .header-xite {
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;  
+        display: flex;
         justify-content: space-between;
     }
 
@@ -314,9 +376,9 @@
         height: 40px;
     }
 
-            /* ТОВАРЫ */
+    /* ТОВАРЫ */
 
-    
+
     .xite-div {
         max-width: 1200px;
         margin: 0 auto;
@@ -395,46 +457,70 @@
     .xite-list:hover .li-icon-shop {
         opacity: 1;
     }
-    
+
+}
+
+@media(max-width: 1368px) {
+
+    /* ТЕКСТ С КАРИТНКОЙ HEADER */
+    .header-photo {
+        height: 700px;
+    }
+
+    .header-photo-div {
+        padding-top: 190px;
+    }
+
+    .header-photo-lozung {
+        font-size: 35px;
+    }
+
+    .header-photo-discription {
+        font-size: 18px;
+    }
+
+    .header-photo-button {
+        font-size: 16px;
+    }
 }
 
 @media(max-width: 1000px) {
 
     /* НОВЫЕ ТОВАРЫ */
 
-    .section-new{ 
+    .section-new {
         padding: 0 10px 5px 10px;
     }
 
-    .div-slider-new { 
+    .div-slider-new {
         display: none;
     }
 
-    .new-items { 
+    .new-items {
         overflow-x: scroll;
         scrollbar-color: rgba(190, 200, 199) white;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 10px;
     }
 
-    .new-photo { 
+    .new-photo {
         width: 250px;
         height: 250px;
     }
 
-    .new-name{ 
+    .new-name {
         font-size: 20px;
     }
 
-    .new-description{ 
+    .new-description {
         font-size: 18px;
     }
 
-    .new-price{ 
+    .new-price {
         font-size: 18px;
     }
 
-    .li-icon-shop{ 
+    .li-icon-shop {
         width: 20px;
         height: 20px;
         padding: 5px;
@@ -448,35 +534,35 @@
 
     /* ХИТЫ ТОВАРОВ */
 
-    .section-xite{ 
+    .section-xite {
         padding: 10px 10px 5px 10px;
     }
 
-    .div-slider-xite { 
+    .div-slider-xite {
         display: none;
     }
 
-    .xite-items { 
+    .xite-items {
         overflow-x: scroll;
         scrollbar-color: rgba(190, 200, 199) white;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 10px;
     }
 
-    .xite-photo { 
+    .xite-photo {
         width: 250px;
         height: 250px;
     }
 
-    .xite-name{ 
+    .xite-name {
         font-size: 20px;
     }
 
-    .xite-description{ 
+    .xite-description {
         font-size: 18px;
     }
 
-    .xite-price{ 
+    .xite-price {
         font-size: 18px;
     }
 
@@ -503,6 +589,31 @@
         transform: none;
     }
 
+    /* ТЕКСТ С КАРИТНКОЙ HEADER */
+
+    .header-photo {
+        height: 500px;
+    }
+
+    .header-photo-div {
+        padding-top: 80px;
+    }
+
+    .header-photo-div-text {
+        max-width: 400px;
+    }
+
+    .header-photo-lozung {
+        font-size: 30px;
+    }
+
+    .header-photo-discription {
+        font-size: 16px;
+    }
+
+    .header-photo-button {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -515,6 +626,37 @@
     .catalog-li-text {
         font-size: 13px;
         font-weight: 400;
+    }
+
+    /* ТЕКСТ С КАРИТНКОЙ HEADER */
+
+    .header-photo {
+        height: 500px;
+    }
+
+    .header-photo{ 
+        background-image: url("../image/header/header-photo-tel.png");
+    }
+
+    .header-photo-div-text{ 
+        max-width: 300px;
+    }
+
+    .header-photo-div {
+        padding-top: 85px;
+    }
+
+    .header-photo-lozung {
+        font-size: 24px;
+    }
+
+    .header-photo-discription {
+        font-size: 14px;
+        padding: 10px 0 ;
+    }
+
+    .header-photo-button {
+        font-size: 12px;
     }
 
 }

@@ -67,6 +67,25 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
 
     <main>
 
+        <!-- ТЕКСТ С КАРИТНКОЙ HEADER -->
+
+        <section class="header-photo">
+            <div class="header-photo-div">
+                <div class="header-photo-div-text">
+                    <h1 class="header-photo-lozung">Ваша красота – наша профессия. Инновационные средства для
+                        безупречного
+                        ухода.</h1>
+                    <p class="header-photo-discription">
+                        Rizo предлагает эксклюзивную линейку профессиональной косметики для ухода за телом, волосами и
+                        кожей. Наши продукты созданы с использованием передовых технологий и натуральных компонентов,
+                        чтобы
+                        подарить вам ощущение свежести, здоровья и уверенности в себе.
+                    </p>
+                    <button class="header-photo-button">КАТАЛОГ</button>
+                </div>
+            </div>
+        </section>
+
         <!-- КАТАЛОГ -->
 
         <section class="section-catalog">
@@ -119,20 +138,20 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
         <!-- НОВЫЕ ТОВАРЫ -->
 
         <section class="section-new">
-            
-                <!-- СЛАЙДРЕ -->
+
+            <!-- СЛАЙДРЕ -->
 
             <div class="header-new">
                 <h1 class="new-text">НОВИНКИ</h1>
                 <div class="div-slider-new">
-                    <button class="slider-button-back-new button-slider-all"><img src="../image/slider/back.png" alt="back"
-                            class="back-slider slider"></button>
-                    <button class="slider-button-next-new button-slider-all"><img src="../image/slider/next.png" alt="back"
-                            class="next-slider slider"></button>
+                    <button class="slider-button-back-new button-slider-all"><img src="../image/slider/back.png"
+                            alt="back" class="back-slider slider"></button>
+                    <button class="slider-button-next-new button-slider-all"><img src="../image/slider/next.png"
+                            alt="back" class="next-slider slider"></button>
                 </div>
             </div>
 
-                <!-- ТОВАРЫ -->
+            <!-- ТОВАРЫ -->
 
             <div class="new-div">
                 <ul class="new-items">
@@ -155,19 +174,19 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
 
         <section class="section-xite">
 
-                <!-- СЛАЙДЕР -->
+            <!-- СЛАЙДЕР -->
 
             <div class="header-xite">
                 <h1 class="xite-text">ХИТЫ</h1>
                 <div class="div-slider-xite">
-                    <button class="slider-button-back-xite button-slider-all"><img src="../image/slider/back.png" alt="back"
-                            class="back-slider slider"></button>
-                    <button class="slider-button-next-xite button-slider-all"><img src="../image/slider/next.png" alt="back"
-                            class="next-slider slider"></button>
+                    <button class="slider-button-back-xite button-slider-all"><img src="../image/slider/back.png"
+                            alt="back" class="back-slider slider"></button>
+                    <button class="slider-button-next-xite button-slider-all"><img src="../image/slider/next.png"
+                            alt="back" class="next-slider slider"></button>
                 </div>
             </div>
 
-                <!-- ТОВАРЫ -->
+            <!-- ТОВАРЫ -->
 
             <div class="xite-div">
                 <ul class="xite-items">
