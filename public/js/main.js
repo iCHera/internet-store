@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderButtonNext = document.querySelector('.slider-button-next-new');
 
   let scrollPosition = 0;
-  const itemWidth = newLists[0].offsetWidth + 40; 
+  const itemWidth = newLists[0].offsetWidth + 20; 
   const visibleItems = Math.floor(newItems.offsetWidth / itemWidth);
 
   sliderButtonNext.addEventListener('click', function() {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const backSlide = document.querySelector('.slider-button-back-xite');
 
   let scrollPoss = 0;
-  const itemWidth = xiteList[0].offsetWidth + 40;
+  const itemWidth = xiteList[0].offsetWidth + 20;
   const visibleItems = Math.floor(xiteItems.offsetWidth / itemWidth);
 
   nextSlide.addEventListener('click', function() { 
