@@ -398,7 +398,94 @@
     
 }
 
-@media(max-width: 1367px) {}
+@media(max-width: 1000px) {
+
+    /* НОВЫЕ ТОВАРЫ */
+
+    .section-new{ 
+        padding: 0 10px 5px 10px;
+    }
+
+    .div-slider-new { 
+        display: none;
+    }
+
+    .new-items { 
+        overflow-x: scroll;
+        scrollbar-color: rgba(190, 200, 199) white;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+    }
+
+    .new-photo { 
+        width: 250px;
+        height: 250px;
+    }
+
+    .new-name{ 
+        font-size: 20px;
+    }
+
+    .new-description{ 
+        font-size: 18px;
+    }
+
+    .new-price{ 
+        font-size: 18px;
+    }
+
+    .li-icon-shop{ 
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    .new-list:hover {
+        transform: none;
+        transition: none;
+        box-shadow: none;
+    }
+
+    /* ХИТЫ ТОВАРОВ */
+
+    .section-xite{ 
+        padding: 10px 10px 5px 10px;
+    }
+
+    .div-slider-xite { 
+        display: none;
+    }
+
+    .xite-items { 
+        overflow-x: scroll;
+        scrollbar-color: rgba(190, 200, 199) white;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+    }
+
+    .xite-photo { 
+        width: 250px;
+        height: 250px;
+    }
+
+    .xite-name{ 
+        font-size: 20px;
+    }
+
+    .xite-description{ 
+        font-size: 18px;
+    }
+
+    .xite-price{ 
+        font-size: 18px;
+    }
+
+    .xite-list:hover {
+        transform: none;
+        transition: none;
+        box-shadow: none;
+    }
+}
 
 @media(max-width: 768px) {
 
@@ -409,7 +496,7 @@
         overflow-x: scroll;
         scrollbar-color: rgba(190, 200, 199) white;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: 7px;
+        padding-bottom: 10px;
     }
 
     .goods-list:hover {
