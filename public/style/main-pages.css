@@ -458,6 +458,128 @@
         opacity: 1;
     }
 
+    /* ТОВАРЫ SERI */
+
+    /* HEADER SERI */
+
+    .section-seri {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .seri-text {
+    }
+    .seri-button {
+    }
+
+    /* ТОВАРЫ SERI */
+
+    .seri-product { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .seri-product-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .seri-button { 
+        background: none;
+        border: none;
+        height: 50px;
+    }
+
+    .seri-image { 
+        height: 50px;
+        width: 50px;
+    }
+
+    .seri-product-ul {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+        transition: transform 0.8s ease-in-out;
+        padding: 5px 0 20px 0;
+    }
+
+    .seri-pdocuct-li { 
+        width: 100%;
+    }
+
+    .seri-pdocuct-li:hover {
+        transform: scale(1.015);
+        transition: 0.7s;
+        box-shadow: 5px 5px 15px grey;
+    }
+
+    .seri-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .seri-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .seri-name {
+        font-family: GraphikLCG;
+        font-weight: 0;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .seri-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .seri-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .seri-pdocuct-li:hover .li-icon-shop {
+        opacity: 1;
+    }
+    
 }
 
 @media(max-width: 1368px) {

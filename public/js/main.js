@@ -66,3 +66,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() { 
+  const seriProductUl = document.querySelector('.seri-product-ul');
+  const seriProductLi = document.querySelectorAll('.seri-pdocuct-li');
+  const sliderBack = document.querySelector('.seri-button-back');
+  const sliderNext = document.querySelector('.seri-button-next');
+
+  let slideCart = 0;
+  const itemWidth = seriProductLi[0].offsetWidth + 40; 
+  const visibleItems = Math.floor(seriProductUl.offsetWidth / itemWidth);
+  const maxSlide = (seriProductLi.length - visibleItems) * itemWidth;
+
+  sliderNext.addEventListener('click', function() {
+    if (slideCart < maxSlide) {
+      slideCart += itemWidth * visibleItems;
+      if (slideCart > maxSlide) {
+        slideCart = maxSlide;
+      }
+      seriProductUl.style.transform = `translateX(-${slideCart}px)`;
+    }
+  });
+
+  sliderBack.addEventListener('click', function() {
+    if (slideCart > 0) { 
+      slideCart -= itemWidth * visibleItems;
+      if (slideCart < 0) {
+        slideCart = 0;
+      }
+      seriProductUl.style.transform = `translateX(-${slideCart}px)`;
+    }
+  });
+});

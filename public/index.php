@@ -23,6 +23,12 @@ $xite = [];
 if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
     $xite = $xite->fetchALL(PDO::FETCH_ASSOC);
 }
+
+$seri = [];
+
+if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
+    $seri = $seri->fetchALL(PDO::FETCH_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -203,6 +209,42 @@ if ($xite = $db->query("SELECT * FROM `goods` WHERE xite = 'yes'")) {
                     <?php endforeach; ?>
                 </ul>
             </div>
+        </section>
+
+        <!-- ТОВАРЫ ОТ SERI -->
+
+        <section class="section-seri">
+
+            <!-- БАННЕР SERI -->
+
+            <div class="seri-text">
+                <h1 class="seri-text"></h1>
+                <button class="seri-button">ПЕРЕЙТИ</button>
+            </div>
+
+            <!-- ТОВАРЫ SERI -->
+            <div class="seri-product">
+                <button class="seri-button-back seri-button"><img src="../image/slider/back.png" alt=""
+                        class="seri-button-back-image seri-image"></button>
+                <div class="seri-product-list">
+                    <ul class="seri-product-ul">
+                        <?php foreach ($seri as $data): ?>
+                            <li class="seri-pdocuct-li">
+                                <a href="" class="seri-items-text">
+                                    <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
+                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                    <h1 class="seri-name"><?php echo $data['name']; ?></h1>
+                                    <p class="seri-description"><?php echo $data['shortDescription']; ?></p>
+                                    <p class="seri-price"><?= $data['price'] ?> <span class="seri-price-span">BYN</span></p>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <button class="seri-button-next seri-button"><img src="../image/slider/next.png" alt=""
+                        class="seri-button-next-image seri-image"></button>
+            </div>
+
         </section>
     </main>
     <script src="js/main.js"></script>
