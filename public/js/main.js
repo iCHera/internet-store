@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const sliderNext = document.querySelector('.seri-button-next');
 
   let slideCart = 0;
-  const itemWidth = seriProductLi[0].offsetWidth + 40; 
+  const itemWidth = seriProductLi[0].offsetWidth + 20; 
   const visibleItems = Math.floor(seriProductUl.offsetWidth / itemWidth);
   const maxSlide = (seriProductLi.length - visibleItems) * itemWidth;
 
   sliderNext.addEventListener('click', function() {
     if (slideCart < maxSlide) {
-      slideCart += itemWidth * visibleItems;
+      slideCart += itemWidth;
       if (slideCart > maxSlide) {
         slideCart = maxSlide;
       }
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   sliderBack.addEventListener('click', function() {
     if (slideCart > 0) { 
-      slideCart -= itemWidth * visibleItems;
+      slideCart -= itemWidth;
       if (slideCart < 0) {
         slideCart = 0;
       }

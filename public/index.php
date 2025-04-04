@@ -148,7 +148,9 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
             <!-- СЛАЙДРЕ -->
 
             <div class="header-new">
-                <h1 class="new-text">НОВИНКИ</h1>
+                <a href="#" class="new-text">
+                    <h1>НОВИНКИ</h1>
+                </a>
                 <div class="div-slider-new">
                     <button class="slider-button-back-new button-slider-all"><img src="../image/slider/back.png"
                             alt="back" class="back-slider slider"></button>
@@ -183,7 +185,9 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
             <!-- СЛАЙДЕР -->
 
             <div class="header-xite">
-                <h1 class="xite-text">ХИТЫ</h1>
+                <a href="#" class="xite-text">
+                    <h1>ХИТЫ</h1>
+                </a>
                 <div class="div-slider-xite">
                     <button class="slider-button-back-xite button-slider-all"><img src="../image/slider/back.png"
                             alt="back" class="back-slider slider"></button>
@@ -214,36 +218,39 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
         <!-- ТОВАРЫ ОТ SERI -->
 
         <section class="section-seri">
-
-            <!-- БАННЕР SERI -->
-
-            <div class="seri-text">
-                <h1 class="seri-text"></h1>
-                <button class="seri-button">ПЕРЕЙТИ</button>
-            </div>
-
-            <!-- ТОВАРЫ SERI -->
-            <div class="seri-product">
-                <button class="seri-button-back seri-button"><img src="../image/slider/back.png" alt=""
-                        class="seri-button-back-image seri-image"></button>
-                <div class="seri-product-list">
-                    <ul class="seri-product-ul">
-                        <?php foreach ($seri as $data): ?>
-                            <li class="seri-pdocuct-li">
-                                <a href="" class="seri-items-text">
-                                    <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
-                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
-                                    <h1 class="seri-name"><?php echo $data['name']; ?></h1>
-                                    <p class="seri-description"><?php echo $data['shortDescription']; ?></p>
-                                    <p class="seri-price"><?= $data['price'] ?> <span class="seri-price-span">BYN</span></p>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                
+                <!-- БАННЕР SERI -->
+                 
+                <div class="seri-text-div">
+                    <a href="#" class="seri-link">
+                        <h1 class="seri-text">SERI</h1>
+                    </a>
+                    <h1 class="seri-baner"></h1>
                 </div>
-                <button class="seri-button-next seri-button"><img src="../image/slider/next.png" alt=""
-                        class="seri-button-next-image seri-image"></button>
-            </div>
+
+                <!-- ТОВАРЫ SERI -->
+
+                <div class="seri-product">
+                    <button class="seri-button-back seri-button"><img src="../image/slider/back.png" alt=""
+                            class="seri-button-back-image seri-image"></button>
+                    <div class="seri-product-list">
+                        <ul class="seri-product-ul">
+                            <?php foreach ($seri as $data): ?>
+                                <li class="seri-pdocuct-li">
+                                    <a href="" class="seri-items-text">
+                                        <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
+                                        <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                        <h1 class="seri-name"><?php echo $data['name']; ?></h1>
+                                        <p class="seri-description"><?php echo $data['shortDescription']; ?></p>
+                                        <!-- <p class="seri-price"><?= $data['price'] ?> <span class="seri-price-span">BYN</span></p> -->
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <button class="seri-button-next seri-button"><img src="../image/slider/next.png" alt=""
+                            class="seri-button-next-image seri-image"></button>
+                </div>
 
         </section>
     </main>
