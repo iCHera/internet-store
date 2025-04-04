@@ -163,11 +163,11 @@
         color: white;
         font-size: 18px;
         font-family: Nunito;
-        transition: 1s;
+        transition: 0.7s;
     }
 
     .header-photo-button:hover {
-        background: white;
+        background: rgba(255, 255, 255, 0);
         color: black;
     }
 
@@ -269,7 +269,7 @@
         display: flex;
         gap: 20px;
         transition: transform 0.8s ease-in-out;
-        padding: 5px 0 20px 0;
+        padding: 5px 10px 20px 10px;
     }
 
     .new-list {
@@ -400,7 +400,7 @@
         display: flex;
         gap: 20px;
         transition: transform 0.8s ease-in-out;
-        padding: 5px 0 20px 0;
+        padding: 5px 10px 20px 10px;
     }
 
     .xite-list:hover {
@@ -518,7 +518,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
         max-width: 1200px;
         margin-top: -100px;
     }
@@ -552,7 +552,7 @@
         gap: 20px;
         width: 100%;
         transition: transform 0.8s ease-in-out;
-        padding: 5px 0 20px 0;
+        padding: 5px 0 20px 10px;
     }
 
     .seri-pdocuct-li {
@@ -658,7 +658,7 @@
     /* ABSOLUT SERI */
 
     .seri-product { 
-        margin-top: -90px;
+        margin-top: -100px;
     }
 
     .seri-product-list{ 
@@ -777,7 +777,7 @@
     }
 
     .seri-product {
-        margin-top: -80px;
+        margin-top: -110px;
     }
 
     .seri-button {
@@ -848,6 +848,10 @@
     .seri-baner{
         height: 400px;
     }
+
+    .seri-product {
+        margin-top: -100px;
+    }
 }
 
         /* МЕДИА 500PX */
@@ -898,7 +902,7 @@
         /* SECTION SERI */
 
     .seri-product{
-        margin-top: -100px;
+        margin-top: -70px;
     }
 
     .seri-baner{
