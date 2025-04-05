@@ -115,7 +115,7 @@
         margin-top: 65px;
         width: 100%;
         height: 912px;
-        background-image: url("../image/main/header-photo.png");
+        background-image: url("../image/main-page's/header-photo.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -486,7 +486,7 @@
         box-sizing: border-box;
         height: 500px;
         width: 100%;
-        background-image: url("../image/main/seri.png");
+        background-image: url("../image/main-page's/seri.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -875,7 +875,7 @@
     }
 
     .header-photo {
-        background-image: url("../image/main/header-photo-tel.png");
+        background-image: url("../image/main-page's/header-photo-tel.png");
     }
 
     .header-photo-div-text {
