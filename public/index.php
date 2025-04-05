@@ -45,11 +45,11 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
 </head>
 
 <body>
-    <!-- ШАПКА -->
+    <!-- ШАПКА --> 
 
     <header class="header">
         <div class="header-div">
-            <a href="/index.php" class="header-left">
+            <a href="../index.php" class="header-left"> 
                 <img src="image/header/icon-site.png" alt="icon" class="site-icon">
                 <h1 class="header-logo">Rizo</h1>
             </a>
@@ -235,7 +235,7 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
                         class="seri-button-back-image seri-image"></button>
                 <div class="seri-product-list">
                     <ul class="seri-product-ul">
-                        <?php foreach ($seri as $data): ?>
+                        <?php foreach ($seri as $data): ?>  
                             <li class="seri-pdocuct-li">
                                 <a href="" class="seri-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
