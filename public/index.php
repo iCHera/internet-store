@@ -45,6 +45,7 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
 </head>
 
 <body>
+
     <!-- ШАПКА --> 
 
     <header class="header">
@@ -133,9 +134,9 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
                             <img src="image/catalog/oils.png" alt="cream" class="catalog-li-photo">
                             <span class="catalog-li-text">Масла</span>
                         </a></li>
-                    <li class="catalog-li"><a href="#" class="catalog-li-a">
+                    <li class="catalog-li"><a href="../pages/fluid.php" class="catalog-li-a">
                             <img src="image/catalog/serum.png" alt="serum" class="catalog-li-photo">
-                            <span class="catalog-li-text">Сыворотки</span>
+                            <span class="catalog-li-text">Флюиды</span>
                         </a></li>
                 </ul>
             </div>
