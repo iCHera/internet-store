@@ -172,7 +172,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                 <ul class="new-items">
                     <?php foreach ($new as $data): ?>
                         <li class="new-list">
-                            <a href="" class="new-items-text">
+                        <a href="product.php?id=<?= $data['id'] ?>" class="new-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                 <h1 class="new-name"><?php echo $data['name']; ?></h1>
