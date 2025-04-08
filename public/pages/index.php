@@ -56,7 +56,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
 
     <header class="header">
         <div class="header-div">
-            <a href="../index.php" class="header-left">
+            <a href="../pages/index.php" class="header-left">
                 <img src="../image/header/icon-site.png" alt="icon" class="site-icon">
                 <h1 class="header-logo">Rizo</h1>
             </a>
@@ -94,7 +94,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                         чтобы
                         подарить вам ощущение свежести, здоровья и уверенности в себе.
                     </p>
-                    <button class="header-photo-button">КАТАЛОГ</button>
+                    <button class="header-photo-button"><a href="#" class="header-photo-a">КАТАЛОГ</a></button>
                 </div>
             </div>
         </section>
@@ -298,7 +298,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
 
         </section>
     </main>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

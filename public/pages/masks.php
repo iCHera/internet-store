@@ -26,9 +26,11 @@ if ($query = $db->query("SELECT * FROM `goods` WHERE catalog = 'masks'")) {
 </head>
 
 <body>
+    <!-- ШАПКА -->
+
     <header class="header">
         <div class="header-div">
-            <a href="/index.php" class="header-left">
+            <a href="../pages/index.php" class="header-left">
                 <img src="../image/header/icon-site.png" alt="icon" class="site-icon">
                 <h1 class="header-logo">Rizo</h1>
             </a>

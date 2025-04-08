@@ -158,17 +158,28 @@
 
     .header-photo-button {
         padding: 10px 30px;
+        transition: 0.7s;
         background: black;
-        border: 1px solid black;
-        color: white;
+        border: 0;
+    }
+
+    .header-photo-a { 
         font-size: 18px;
         font-family: Nunito;
-        transition: 0.7s;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .header-photo-button:hover .header-photo-a { 
+        color: black;
+        font-size: 20px;
     }
 
     .header-photo-button:hover {
         background: rgba(255, 255, 255, 0);
         color: black;
+        border: 1px solid black;
+        transform: scale(1.03);
     }
 
 
