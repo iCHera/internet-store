@@ -43,7 +43,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="image/header/icon-site.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../image/header/icon-site.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/main-pages.css">
     <link rel="stylesheet" href="../style/catalog.css">
     <link rel="stylesheet" href="../style/style.css">
@@ -57,21 +57,21 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
     <header class="header">
         <div class="header-div">
             <a href="../index.php" class="header-left">
-                <img src="image/header/icon-site.png" alt="icon" class="site-icon">
+                <img src="../image/header/icon-site.png" alt="icon" class="site-icon">
                 <h1 class="header-logo">Rizo</h1>
             </a>
             <form class="sertch">
                 <input type="text" class="sertch-input" placeholder="Поиск">
-                <button class="sertch-button"><img src="image/header/icon-search.png" alt="sertch"
+                <button class="sertch-button"><img src="../image/header/icon-search.png" alt="sertch"
                         class="sertch-button-icon"></button>
             </form>
             <ul class="header-list">
                 <li class="header-list-li">
-                    <button class="header-list-li-shop"><img src="image/header/icon-black.png" alt=""
+                    <button class="header-list-li-shop"><img src="../image/header/icon-black.png" alt=""
                             class="header-list-li-shop-icon"></button>
                 </li>
                 <li class="header-list-li">
-                    <button class="header-list-li-user"><img src="image/header/icon-user.png" alt=""
+                    <button class="header-list-li-user"><img src="../image/header/icon-user.png" alt=""
                             class="header-list-li-user-icon"></button>
                 </li>
             </ul>
@@ -105,15 +105,15 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
             <div class="section-catalog-div">
                 <ul class="catalog-ul">
                     <li class="catalog-li"><a href="../pages/shampoo.php" class="catalog-li-a">
-                            <img src="image/catalog/shampoo.png" alt="shampoo" class="catalog-li-photo">
+                            <img src="../image/catalog/shampoo.png" alt="shampoo" class="catalog-li-photo">
                             <span class="catalog-li-text">Шампуни</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/conditioners.php" class="catalog-li-a">
-                            <img src="image/catalog/conditioner.png" alt="conditioner" class="catalog-li-photo">
+                            <img src="../image/catalog/conditioner.png" alt="conditioner" class="catalog-li-photo">
                             <span class="catalog-li-text">Кондиционеры</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/balm.php" class="catalog-li-a">
-                            <img src="image/catalog/balm.png" alt="conditioner" class="catalog-li-photo">
+                            <img src="../image/catalog/balm.png" alt="conditioner" class="catalog-li-photo">
                             <span class="catalog-li-text">Бальзамы</span>
                         </a></li>
                     <!-- <li class="catalog-li"><a href="#" class="catalog-li-a">
@@ -121,27 +121,27 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                             <span class="catalog-li-text">Гели</span>
                         </a></li> -->
                     <li class="catalog-li"><a href="../pages/varnishes.php" class="catalog-li-a">
-                            <img src="image/catalog/varnish.png" alt="varnish" class="catalog-li-photo">
+                            <img src="../image/catalog/varnish.png" alt="varnish" class="catalog-li-photo">
                             <span class="catalog-li-text">Лаки</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/mousse.php" class="catalog-li-a">
-                            <img src="image/catalog/mousse.png" alt="varnish" class="catalog-li-photo">
+                            <img src="../image/catalog/mousse.png" alt="varnish" class="catalog-li-photo">
                             <span class="catalog-li-text">Муссы</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/elixirs.php" class="catalog-li-a">
-                            <img src="image/catalog/elixirs.png" alt="varnish" class="catalog-li-photo">
+                            <img src="../image/catalog/elixirs.png" alt="varnish" class="catalog-li-photo">
                             <span class="catalog-li-text">Элексиры</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/masks.php" class="catalog-li-a">
-                            <img src="image/catalog/cream.png" alt="cream" class="catalog-li-photo">
+                            <img src="../image/catalog/cream.png" alt="cream" class="catalog-li-photo">
                             <span class="catalog-li-text">Маски</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/oils.php" class="catalog-li-a">
-                            <img src="image/catalog/oils.png" alt="cream" class="catalog-li-photo">
+                            <img src="../image/catalog/oils.png" alt="cream" class="catalog-li-photo">
                             <span class="catalog-li-text">Масла</span>
                         </a></li>
                     <li class="catalog-li"><a href="../pages/fluid.php" class="catalog-li-a">
-                            <img src="image/catalog/serum.png" alt="serum" class="catalog-li-photo">
+                            <img src="../image/catalog/serum.png" alt="serum" class="catalog-li-photo">
                             <span class="catalog-li-text">Флюиды</span>
                         </a></li>
                 </ul>

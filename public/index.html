@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="image/header/icon-site.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style/main-pages.css">
-    <link rel="stylesheet" href="../style/catalog.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>Rizo Store</title>   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/header/icon-site.png" type="image/x-icon">
+  <title>Rizo Store</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+    }
+
+    .loader {
+      width: 120px;
+      height: 120px;
+    }
+
+    .loader circle {
+      fill: none;
+      stroke: #383838;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      stroke-dasharray: 314; /* 2 * π * r = 2 * π * 50 */
+      stroke-dashoffset: 314;
+      animation: fillCircle 3s linear infinite;
+    }
+
+    @keyframes fillCircle {
+      0% {
+        stroke-dashoffset: 314;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <svg class="loader" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="50"/>
+  </svg>
+  <script>
+    setTimeout(() => {
+        window.location.href = "../pages/index.php"
+    }, 3001);
+  </script>
 </body>
 </html>
