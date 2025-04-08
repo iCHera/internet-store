@@ -79,11 +79,11 @@
         background: none;
         border: none;
         padding: 0 5px;
+        transition: 0.3s;
     }
 
     .header-list-li-shop:hover {
         transform: scale(1.1);
-        transition: 0.3s;
     }
 
     .header-list-li-shop-icon {
@@ -96,11 +96,11 @@
         padding: 0 5px;
         background: none;
         border: none;
+        transition: 0.3s;
     }
 
     .header-list-li-user:hover {
         transform: scale(1.1);
-        transition: 0.3s;
     }
 
     .header-list-li-user-icon {
@@ -204,11 +204,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: 0.3s;
     }
 
     .catalog-li-a:hover {
         transform: scale(1.1);
-        transition: 0.3s;
     }
 
     .catalog-li-photo {
@@ -244,11 +244,11 @@
         letter-spacing: 5px;
         font-family: Outfit;
         font-weight: 700;
+        transition: 0.7s;
     }
 
     .new-text:hover {
         color: grey;
-        transition: 0.7s;
     }
 
     .div-slider-new {
@@ -287,12 +287,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: 0.7s;
     }
 
     .new-list:hover {
         transform: scale(1.015);
-        transition: 0.7s;
-        box-shadow: 5px 5px 15px grey;
+        box-shadow: 5px 5px 15px rgb(97, 97, 97);
     }
 
     .new-photo {
@@ -375,11 +375,11 @@
         letter-spacing: 5px;
         font-family: Outfit;
         font-weight: 700;
+        transition: 0.7s;
     }
 
     .xite-text:hover {
         color: grey;
-        transition: 0.7s;
     }
 
     .div-slider-xite {
@@ -508,11 +508,11 @@
         font-family: Outfit;
         font-weight: 700;
         color: black;
+        transition: 0.7s;
     }
 
     .seri-link:hover {
         color: grey;
-        transition: 0.7s;
     }
 
     .seri-text {
@@ -665,11 +665,11 @@
         font-family: Outfit;
         font-weight: 700;
         color: black;
+        transition: 0.7s;
     }
 
     .tefia-link:hover {
         color: grey;
-        transition: 0.7s;
     }
 
     .tefia-text {

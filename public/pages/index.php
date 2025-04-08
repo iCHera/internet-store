@@ -172,7 +172,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                 <ul class="new-items">
                     <?php foreach ($new as $data): ?>
                         <li class="new-list">
-                        <a href="product.php?id=<?= $data['id'] ?>" class="new-items-text">
+                            <a href="product.php?id=<?= $data['id'] ?>" class="new-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                 <h1 class="new-name"><?php echo $data['name']; ?></h1>
@@ -209,7 +209,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                 <ul class="xite-items">
                     <?php foreach ($xite as $data): ?>
                         <li class="xite-list">
-                            <a href="" class="xite-items-text">
+                            <a href="product.php?id=<?= $data['id'] ?>" class="xite-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="xite-photo">
                                 <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                 <h1 class="xite-name"><?php echo $data['name']; ?></h1>
@@ -244,7 +244,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                     <ul class="seri-product-ul">
                         <?php foreach ($seri as $data): ?>
                             <li class="seri-pdocuct-li">
-                                <a href="" class="seri-items-text">
+                                <a href="product.php?id=<?= $data['id'] ?>" class="seri-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
                                     <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                     <h1 class="seri-name"><?php echo $data['name']; ?></h1>
@@ -282,7 +282,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                     <ul class="tefia-product-ul">
                         <?php foreach ($tefia as $data): ?>
                             <li class="tefia-pdocuct-li">
-                                <a href="" class="tefia-items-text">
+                                <a href="product.php?id=<?= $data['id'] ?>" class="tefia-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="tefia-photo">
                                     <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                                     <h1 class="tefia-name"><?php echo $data['name']; ?></h1>

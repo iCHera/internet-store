@@ -16,14 +16,18 @@ if ($id) {
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Rizo Store</title>
-    <link rel="stylesheet" href="../style/product.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../image/header/icon-site.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/product.css">
     <link rel="stylesheet" href="../style/main-pages.css">
     <link rel="stylesheet" href="../style/style.css">
+    <title>Rizo Store</title>
+    <title>Rizo Store</title>
 </head>
+
 <body>
 
     <!-- ШАПКА -->
@@ -52,10 +56,41 @@ if ($id) {
         </div>
     </header>
 
-    <h1><?php echo $product['name']; ?></h1>
-    <img src="<?php echo $product['image']; ?>" alt="Фото товара" style="width:300px">
-    <p><?php echo $product['description']; ?></p>
-    <p>Цена: <?php echo $product['price']; ?> BYN</p>
 
+    <section class="product">
+        <!-- <div class="put">
+            <p class="product-put">
+                <a href="../index.php">главная</a>
+                <a href=""></a>
+            </p>
+        </div> -->
+        <div class="product-div">
+            <div class="product-photo-div">
+                <img src="<?php echo $product['image']; ?>" alt="photo product" class="product-photo">
+            </div>
+            <div class="product-text-div">
+                <h1 class="product-name"><?php echo $product['name']; ?></h1>
+                <div class="btend-div">
+                    <p class="brend">БРЕНД:</p>
+                    <a href="../pages/index.php" class="brend-db"><?= $product['brand'] ?></a>
+                </div>
+                <div class="product-volume-div">
+                    <p class="volume-text">ОБЪЁМ:</p>
+                    <p class="volume-db"><?= $product['volume']?> МЛ</p>
+                </div>
+                <div class="description-div">
+                    <p class="description">ОПИСАНИЕ:</p>
+                    <p class="product-description"><?php echo $product['description']; ?></p>
+                </div>
+                <div class="product-price-button">
+                    <p class="product-price"><?php echo $product['price']; ?> BYN</p>
+                    <button class="product-add-basket">ДОБАВИТЬ В КОРЗИНУ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/product.js"></script>
 </body>
+
 </html>

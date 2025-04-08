@@ -2,7 +2,7 @@ document.querySelectorAll('.li-icon-shop').forEach(button => {
   button.addEventListener('click', () => { 
     let backColor = window.getComputedStyle(button).backgroundColor;
 
-    if (backColor === 'rgb(31, 31, 31)') button.style.backgroundColor = 'rgb(57, 223, 57)';
+    if (backColor === 'rgb(31, 31, 31)') button.style.backgroundColor = 'rgb(57, 177, 57)';
     else button.style.backgroundColor = 'rgb(31, 31, 31)';
   });
 });
@@ -131,3 +131,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+
