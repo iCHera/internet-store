@@ -235,7 +235,7 @@
         font-weight: 700;
     }
 
-    .new-text:hover{ 
+    .new-text:hover {
         color: grey;
         transition: 0.7s;
     }
@@ -366,7 +366,7 @@
         font-weight: 700;
     }
 
-    .xite-text:hover{ 
+    .xite-text:hover {
         color: grey;
         transition: 0.7s;
     }
@@ -492,14 +492,14 @@
         background-position: center center;
     }
 
-    .seri-link{
+    .seri-link {
         letter-spacing: 5px;
         font-family: Outfit;
         font-weight: 700;
         color: black;
     }
 
-    .seri-link:hover{
+    .seri-link:hover {
         color: grey;
         transition: 0.7s;
     }
@@ -624,6 +624,163 @@
         opacity: 1;
     }
 
+
+    /* ТОВАРЫ TEFIA */
+
+    /* HEADER TEFIA */
+
+    .section-tefia {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tefia-baner {
+        box-sizing: border-box;
+        height: 500px;
+        width: 100%;
+        background-image: url("../image/main-page's/tefia.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .tefia-link {
+        letter-spacing: 5px;
+        font-family: Outfit;
+        font-weight: 700;
+        color: black;
+    }
+
+    .tefia-link:hover {
+        color: grey;
+        transition: 0.7s;
+    }
+
+    .tefia-text {
+        letter-spacing: 5px;
+        font-family: Outfit;
+        font-weight: 700;
+        padding-left: 10px;
+        padding-bottom: 8px;
+    }
+
+    /* ТОВАРЫ TEFIA */
+
+    .tefia-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        max-width: 1200px;
+        margin-top: -100px;
+    }
+
+    .tefia-product-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .seri-button {
+        background: none;
+        border: none;
+    }
+
+    .tefia-button {
+        background: none;
+        border: none;
+        height: 50px;
+    }
+
+    .tefia-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .tefia-product-ul {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        transition: transform 0.8s ease-in-out;
+        padding: 5px 0 20px 10px;
+    }
+
+    .tefia-pdocuct-li {
+        width: 100%;
+    }
+
+    .tefia-pdocuct-li:hover {
+        transform: scale(1.015);
+        transition: 0.7s;
+        box-shadow: 5px 5px 15px grey;
+    }
+
+    .tefia-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .tefia-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .tefia-name {
+        font-family: GraphikLCG;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .tefia-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .tefia-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .tefia-pdocuct-li:hover .li-icon-shop {
+        opacity: 1;
+    }
+
 }
 
 @media(max-width: 1368px) {
@@ -651,27 +808,41 @@
     }
 }
 
-        /* МЕДИА 1225PX */
+/* МЕДИА 1225PX */
 
 @media (max-width: 1225px) {
-    
-    /* ABSOLUT SERI */
 
-    .seri-product { 
+    /* ТОВАРЫ SERI */
+
+    .seri-product {
         margin-top: -100px;
     }
 
-    .seri-product-list{ 
+    .seri-product-list {
         padding: 0 30px;
     }
 
-    .section-seri-div{ 
+    .section-seri-div {
         max-width: 1000px;
     }
-    
+
+    /* ТОВАРЫ TEFIA */
+
+    .tefia-product {
+        margin-top: -100px;
+    }
+
+    .tefia-product-list {
+        padding: 0 30px;
+    }
+
+    .tefia-seri-div {
+        max-width: 1000px;
+    }
+
 }
 
-        /* МЕДИА 1000PX */
+/* МЕДИА 1000PX */
 
 @media(max-width: 1000px) {
 
@@ -736,7 +907,7 @@
     }
 
     .div-slider-xite::-webkit-scrollbar {
-        display: none; 
+        display: none;
     }
 
 
@@ -793,9 +964,33 @@
         scrollbar-color: #c5c5c5 white;
         -webkit-overflow-scrolling: touch;
     }
+
+    /* ТОВАРЫ TEFIA */
+
+    .section-tefia {
+        padding: 10px 10px 5px 10px;
+    }
+
+    .tefia-product {
+        margin-top: -110px;
+    }
+
+    .tefia-button {
+        display: none;
+    }
+
+    .tefia-product-ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tefia-product-ul {
+        overflow-x: scroll;
+        scrollbar-color: #c5c5c5 white;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
-        /* МЕДИА 768PX */
+/* МЕДИА 768PX */
 
 @media(max-width: 768px) {
 
@@ -841,20 +1036,34 @@
 
     /* SECTION SERI */
 
-    .section-seri{ 
+    .section-seri {
         padding: 20px 0;
     }
 
-    .seri-baner{
+    .seri-baner {
         height: 400px;
     }
 
     .seri-product {
         margin-top: -100px;
     }
+
+    /* SECTION TEFIA */
+
+    .section-tefia {
+        padding: 20px 0;
+    }
+
+    .tefia-baner {
+        height: 400px;
+    }
+
+    .tefia-product {
+        margin-top: -100px;
+    }
 }
 
-        /* МЕДИА 500PX */
+/* МЕДИА 500PX */
 
 @media(max-width: 500px) {
 
@@ -899,26 +1108,49 @@
         font-size: 12px;
     }
 
-        /* SECTION SERI */
+    /* SECTION SERI */
 
-    .seri-product{
+    .seri-product {
         margin-top: -70px;
     }
 
-    .seri-baner{
+    .seri-baner {
         height: 300px;
     }
 
-    .seri-photo{
+    .seri-photo {
         width: 170px;
         height: 170px;
     }
 
-    .seri-name{
+    .seri-name {
         font-size: 18px;
     }
 
-    .seri-description{
+    .seri-description {
+        font-size: 16px;
+    }
+
+    /* SECTION TEFIA */
+
+    .tefia-product {
+        margin-top: -70px;
+    }
+
+    .tefia-baner {
+        height: 300px;
+    }
+
+    .tefia-photo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .tefia-name {
+        font-size: 18px;
+    }
+
+    .tefia-description {
         font-size: 16px;
     }
 

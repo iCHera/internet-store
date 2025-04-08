@@ -29,6 +29,12 @@ $seri = [];
 if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
     $seri = $seri->fetchALL(PDO::FETCH_ASSOC);
 }
+
+$tefia = [];
+if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
+    $tefia = $tefia->fetchALL(PDO::FETCH_ASSOC);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +52,11 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
 
 <body>
 
-    <!-- ШАПКА --> 
+    <!-- ШАПКА -->
 
     <header class="header">
         <div class="header-div">
-            <a href="../index.php" class="header-left"> 
+            <a href="../index.php" class="header-left">
                 <img src="image/header/icon-site.png" alt="icon" class="site-icon">
                 <h1 class="header-logo">Rizo</h1>
             </a>
@@ -223,10 +229,10 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
             <!-- БАННЕР SERI -->
 
             <div class="seri-text-div">
-                    <a href="#" class="seri-link">
-                        <h1 class="seri-text">SERI</h1>
-                    </a>
-                    <h1 class="seri-baner"></h1>
+                <a href="#" class="seri-link">
+                    <h1 class="seri-text">SERI</h1>
+                </a>
+                <h1 class="seri-baner"></h1>
             </div>
 
             <!-- ТОВАРЫ SERI -->
@@ -236,7 +242,7 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
                         class="seri-button-back-image seri-image"></button>
                 <div class="seri-product-list">
                     <ul class="seri-product-ul">
-                        <?php foreach ($seri as $data): ?>  
+                        <?php foreach ($seri as $data): ?>
                             <li class="seri-pdocuct-li">
                                 <a href="" class="seri-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
@@ -250,6 +256,44 @@ if ($seri = $db->query("SELECT * FROM `goods` WHERE brand = 'Seri'")) {
                 </div>
                 <button class="seri-button-next seri-button"><img src="../image/slider/next.png" alt=""
                         class="seri-button-next-image seri-image"></button>
+            </div>
+
+        </section>
+
+        <!-- ТОВАРЫ ОТ TEFIA -->
+
+        <section class="section-tefia">
+
+            <!-- БАННЕР TEFIA -->
+
+            <div class="tefia-text-div">
+                <a href="#" class="tefia-link">
+                    <h1 class="tefia-text">TEFIA</h1>
+                </a>
+                <h1 class="tefia-baner"></h1>
+            </div>
+
+            <!-- ТОВАРЫ TEFIA -->
+
+            <div class="tefia-product">
+                <button class="tefia-button-back tefia-button"><img src="../image/slider/back.png" alt=""
+                        class="tefia-button-back-image tefia-image"></button>
+                <div class="tefia-product-list">
+                    <ul class="tefia-product-ul">
+                        <?php foreach ($tefia as $data): ?>
+                            <li class="tefia-pdocuct-li">
+                                <a href="" class="tefia-items-text">
+                                    <img src="<?php echo $data['image']; ?>" alt="photo" class="tefia-photo">
+                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                    <h1 class="tefia-name"><?php echo $data['name']; ?></h1>
+                                    <p class="tefia-description"><?php echo $data['shortDescription']; ?></p>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <button class="tefia-button-next tefia-button"><img src="../image/slider/next.png" alt=""
+                        class="tefia-button-next-image tefia-image"></button>
             </div>
 
         </section>

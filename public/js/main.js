@@ -98,3 +98,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() { 
+
+  const tefiaUl = document.querySelector(".tefia-product-ul");
+  const tefiaLi = document.querySelectorAll(".tefia-pdocuct-li");
+  const nextButton = document.querySelector(".tefia-button-next");
+  const backButton = document.querySelector(".tefia-button-back");
+
+  let slideCart = 0; 
+  const itemWidth = tefiaLi[0].offsetWidth + 20;
+  const visibleItems = Math.floor(tefiaUl.offsetWidth / itemWidth);
+  const maxSlide = (tefiaLi.length - visibleItems) * itemWidth;
+
+  nextButton.addEventListener('click', function() { 
+    if (slideCart < maxSlide) { 
+      slideCart += itemWidth;
+      if(slideCart > maxSlide) { 
+        slideCart = maxSlide;
+      }
+      tefiaUl.style.transform = `translateX(-${slideCart}px)`;
+    }
+  });
+
+  backButton.addEventListener('click', function() { 
+    if (slideCart > 0) { 
+      slideCart -= itemWidth;
+      if (slideCart < 0) { 
+        slideCart = 0;
+      }
+      tefiaUl.style.transform = `translateX(-${slideCart}px)`;
+    }
+  });
+});
