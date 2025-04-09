@@ -168,7 +168,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
 
             <!-- ТОВАРЫ -->
 
-            <div class="new-div">
+            <div class="new-div">   
                 <ul class="new-items">
                     <?php foreach ($new as $data): ?>
                         <li class="new-list">

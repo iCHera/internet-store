@@ -57,7 +57,7 @@ if ($query = $db->query("SELECT * FROM `goods` WHERE catalog = 'oils'")) {
             <ul class="goods-items">
                 <?php foreach ($info as $data): ?>
                     <li class="goods-list">
-                        <a href="" class="goods-items-text">
+                        <a href="product.php?id=<?= $data['id'] ?>" class="goods-items-text">
                             <img src="<?php echo $data['image']; ?>" alt="photo" class="goods-photo">
                             <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
                             <h1 class="goods-name"><?php echo $data['name']; ?></h1>

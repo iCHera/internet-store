@@ -122,8 +122,144 @@
     }
 
     .product-add-basket:hover {
-        transform: scale(1.07);   
+        transform: scale(1.07);
     }
+
+    /* ДРУГИЕ ПРОДУКТЫ */
+
+    /* ТЕКСТ */
+
+    .section-other {
+        padding-top: 50px;
+    }
+
+    .header-other {
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .other-text {
+        padding-left: 10px;
+        padding-top: 6px;
+        letter-spacing: 5px;
+        font-family: Outfit;
+        font-weight: 700;
+        transition: 0.7s;
+    }
+
+    .other-product-link{
+        text-transform: uppercase;
+        transition: 0.7s;
+    }
+
+    .other-product-link:hover {
+        color: rgb(97, 97, 97);
+    }
+
+    .div-slider-other {
+        display: flex;
+        gap: 20px;
+    }
+
+    .button-slider-all-other {
+        border: none;
+        background: none;
+    }
+
+    .slider {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* ТОВАРЫ */
+
+
+    .other-div {
+        /* padding: 0 5px; */
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .other-items {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.8s ease-in-out;
+        padding: 5px 10px 20px 10px;
+    }
+
+    .other-list {
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.7s;
+    }
+
+    .other-list:hover {
+        transform: scale(1.015);
+        box-shadow: 5px 5px 15px rgb(97, 97, 97);
+    }
+
+    .other-photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    .other-items-text {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .other-name {
+        font-family: GraphikLCG;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+
+    .other-description {
+        margin-top: 5px;
+        letter-spacing: 2px;
+        font-family: Loro;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 100%;
+        padding: 0 10px;
+        color: rgb(97, 97, 97);
+    }
+
+    .other-price {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .li-icon-shop {
+        width: 25px;
+        height: 25px;
+        margin-top: -25px;
+        margin-right: 20px;
+        align-self: flex-end;
+        opacity: 0;
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: rgb(31, 31, 31);
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .other-list:hover .li-icon-shop {
+        opacity: 1;
+    }
+
 }
 
 @media (max-width: 1225px) {

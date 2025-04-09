@@ -7,12 +7,22 @@ if ($id) {
     $stmt = $db->prepare("SELECT * FROM goods WHERE id = ?");
     $stmt->execute([$id]);
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($product) {
+        $brand = $product['brand'];
+        $stmtOther = $db->prepare("SELECT * FROM goods WHERE brand = ? AND id != ?");
+        $stmtOther->execute([$brand, $id]);
+        $otherProducts = $stmtOther->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        echo "Товар не найден.";
+        exit;
+    }
 } else {
     echo "Товар не найден.";
     exit;
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -76,7 +86,7 @@ if ($id) {
                 </div>
                 <div class="product-volume-div">
                     <p class="volume-text">ОБЪЁМ:</p>
-                    <p class="volume-db"><?= $product['volume']?> МЛ</p>
+                    <p class="volume-db"><?= $product['volume'] ?> МЛ</p>
                 </div>
                 <div class="description-div">
                     <p class="description">ОПИСАНИЕ:</p>
@@ -87,6 +97,41 @@ if ($id) {
                     <button class="product-add-basket">ДОБАВИТЬ В КОРЗИНУ</button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section-other">
+
+        <!-- СЛАЙДРЕ -->
+
+        <div class="header-other">
+            <h1 href="#" class="other-text">
+                ДРУГИЕ ТОВАРЫ ОТ <a href="#" class="other-product-link"><?= $product['brand']?></a>
+            </h1>
+            <div class="div-slider-other">
+                <button class="slider-button-back-other button-slider-all-other"><img src="../image/slider/back.png" alt="back"
+                        class="back-slider slider"></button>
+                <button class="slider-button-next-other button-slider-all-other"><img src="../image/slider/next.png" alt="back"
+                        class="next-slider slider"></button>
+            </div>
+        </div>
+
+        <!-- ТОВАРЫ -->
+
+        <div class="other-div">
+            <ul class="other-items">
+                <?php foreach ($otherProducts as $data): ?>
+                    <li class="other-list">
+                        <a href="product.php?id=<?= $data['id'] ?>" class="other-items-text">
+                            <img src="<?php echo $data['image']; ?>" alt="photo" class="other-photo">
+                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                            <h1 class="other-name"><?php echo $data['name']; ?></h1>
+                            <p class="other-description"><?php echo $data['shortDescription']; ?></p>
+                            <p class="other-price"><?= $data['price'] ?> <span class="other-price-span">BYN</span></p>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
     </section>
 
