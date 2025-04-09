@@ -64,6 +64,30 @@ if ($id) {
                 </li>
             </ul>
         </div>
+        <div class="basket">
+            <div class="basket-div">
+                <div class="span-point">
+                    <span ></span>
+                    <span></span>
+                </div>
+                <h1 class="basket-text-underfind">пока ничего нету</h1>
+                <h1 class="basket-text">asdad</h1>
+                <ul class="basket-list">
+                    <? foreach ($data as $product): ?>
+                        <li class="basket-item">
+                            <div class="basket-item">
+                                <img src="<?= $data['image'] ?>" alt="photo">
+                            </div>
+                            <div class="basket-product">
+                                <h1 class="basket-name"><?= $data['name'] ?></h1>
+                                <h1 class="basket-price"><?= $data['price'] ?></h1>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <button class="buy-basket">ОФОРМНИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
     </header>
 
 
@@ -124,7 +148,7 @@ if ($id) {
                     <li class="other-list">
                         <a href="product.php?id=<?= $data['id'] ?>" class="other-items-text">
                             <img src="<?php echo $data['image']; ?>" alt="photo" class="other-photo">
-                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop-other">
                             <h1 class="other-name"><?php echo $data['name']; ?></h1>
                             <p class="other-description"><?php echo $data['shortDescription']; ?></p>
                             <p class="other-price"><?= $data['price'] ?> <span class="other-price-span">BYN</span></p>

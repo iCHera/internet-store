@@ -76,6 +76,30 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                 </li>
             </ul>
         </div>
+        <div class="basket">
+            <div class="basket-div">
+                <div class="span-point">
+                    <span ></span>
+                    <span></span>
+                </div>
+                <h1 class="basket-text-underfind">пока ничего нету</h1>
+                <h1 class="basket-text">asdad</h1>
+                <ul class="basket-list">
+                    <? foreach ($data as $product): ?>
+                        <li class="basket-item">
+                            <div class="basket-item">
+                                <img src="<?= $data['image'] ?>" alt="photo">
+                            </div>
+                            <div class="basket-product">
+                                <h1 class="basket-name"><?= $data['name'] ?></h1>
+                                <h1 class="basket-price"><?= $data['price'] ?></h1>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <button class="buy-basket">ОФОРМНИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -168,7 +192,7 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
 
             <!-- ТОВАРЫ -->
 
-            <div class="new-div">   
+            <div class="new-div">
                 <ul class="new-items">
                     <?php foreach ($new as $data): ?>
                         <li class="new-list">

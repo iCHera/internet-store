@@ -109,6 +109,97 @@
         height: 30px;
     }
 
+    /* СПИСОК ТОВАРОВ */
+
+    .basket {
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 500px;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        overflow-y: auto;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .basket.basket--active {
+        transform: translateX(0%);
+    }
+
+    .basket-text-underfind.basket-text-underfind--active {
+        display: block;
+    }
+
+    .basket-text.basket-text--active,
+    .basket-list.basket-list--active,
+    .basket-item.basket-item--active,
+    .buy-basket.buy-basket--avtive {
+        display: block;
+    }
+
+    .basket-div {
+        padding: 20px;
+        position: relative;
+    }
+
+    .span-point {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        cursor: pointer;
+        top: 30px;
+        right: 30px;
+    }
+    
+    .span-point span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+
+    .span-point:hover{ 
+        color: rgb(97, 97, 97);
+    }
+    
+    .span-point span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    
+    .span-point span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }   
+    
+    .basket-text-underfind{ 
+        display: none;
+    }
+
+    .basket-text {
+        display: none;
+    }
+
+    .basket-list {}
+
+    .basket-item {}
+
+    .basket-product {}
+
+    .basket-name {}
+
+    .basket-price {}
+
+    .buy-basket {
+        display: none;
+    }
+
+
     /* ТЕКСТ С КАРИТНКОЙ HEADER*/
 
     .header-photo {
@@ -163,14 +254,14 @@
         border: 0;
     }
 
-    .header-photo-a { 
+    .header-photo-a {
         font-size: 18px;
         font-family: Nunito;
         color: white;
         transition: 0.3s;
     }
 
-    .header-photo-button:hover .header-photo-a { 
+    .header-photo-button:hover .header-photo-a {
         color: black;
         font-size: 20px;
     }

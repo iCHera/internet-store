@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.querySelectorAll('.li-icon-shop').forEach(button => { 
+document.querySelectorAll('.li-icon-shop-other').forEach(button => { 
     button.addEventListener('click', () => { 
       let backColor = window.getComputedStyle(button).backgroundColor;
   
@@ -27,7 +27,7 @@ document.querySelectorAll('.li-icon-shop').forEach(button => {
   });
   
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".li-icon-shop").forEach(function (icon) {
+    document.querySelectorAll(".li-icon-shop-other").forEach(function (icon) {
         icon.addEventListener("click", function (event) {
             event.stopPropagation();
             event.preventDefault(); 

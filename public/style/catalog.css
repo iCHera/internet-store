@@ -103,6 +103,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .li-icon-shop {
+        opacity: 1;
+    }
+
 }
 
 @media(max-width: 500px) {
@@ -115,10 +119,6 @@
 
     .goods-items {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .li-icon-shop {
-        opacity: 1;
     }
 
 }

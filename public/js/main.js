@@ -132,4 +132,44 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  const shopListButton = document.querySelector('.header-list-li-shop');
+  const shopList = document.querySelector('.basket');
+  const closeButton = document.querySelector('.span-point');
+
+  const textIsunderFind = document.querySelector('.basket-text-underfind');
+  const textIsFind = document.querySelector('.basket-text');
+  const shopListUl = document.querySelector('.basket-list');
+  const shopListLi = document.querySelectorAll('.basket-item');
+  const ShopButton = document.querySelector('.buy-basket');  
+
+  shopListButton.addEventListener('click', function() { 
+    shopList.classList.toggle('basket--active');
+    document.body.classList.add('no-scroll');
+  });
+
+  closeButton.addEventListener('click', function() { 
+    shopList.classList.remove('basket--active');
+    document.body.classList.remove('no-scroll');
+  });
+
+  const isEmpty = shopListLi.length === 0;
+
+  if (isEmpty) { 
+    textIsunderFind.classList.toggle('basket-text-underfind--active');
+    textIsFind.classList.toggle('basket-text--active');
+    shopListUl.classList.toggle('basket-list--active');
+    shopListLi.forEach(item => item.classList.toggle('basket-item--active'));
+    ShopButton.classList.toggle('buy-basket--active');
+  }
+  else { 
+    textIsunderFind.classList.remove('basket-text-underfind--active');
+    textIsFind.classList.remove('basket-text--active');
+    shopListUl.classList.remove('basket-list--active');
+    shopListLi.classList.remove('basket-item--active');
+    ShopButton.classList.remove('buy-basket--active');
+  }
+});
+
 
