@@ -120,12 +120,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const shopList = document.querySelector('.basket');
   const closeButton = document.querySelector('.span-point');
 
-  const textIsunderFind = document.querySelector('.basket-text-underfind');
-  const textIsFind = document.querySelector('.basket-text');
-  const shopListUl = document.querySelector('.basket-list');
-  const shopListLi = document.querySelectorAll('.basket-item');
-  const ShopButton = document.querySelector('.buy-basket');  
-
   shopListButton.addEventListener('click', function() { 
     shopList.classList.toggle('basket--active');
     document.body.classList.add('no-scroll');
@@ -135,23 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
     shopList.classList.remove('basket--active');
     document.body.classList.remove('no-scroll');
   });
-
-  const isEmpty = shopListLi.length === 0;
-
-  if (isEmpty) { 
-    textIsunderFind.classList.toggle('basket-text-underfind--active');
-    textIsFind.classList.toggle('basket-text--active');
-    shopListUl.classList.toggle('basket-list--active');
-    shopListLi.forEach(item => item.classList.toggle('basket-item--active'));
-    ShopButton.classList.toggle('buy-basket--active');
-  }
-  else { 
-    textIsunderFind.classList.remove('basket-text-underfind--active');
-    textIsFind.classList.remove('basket-text--active');
-    shopListUl.classList.remove('basket-list--active');
-    // shopListLi.classList.remove('basket-item--active');
-    ShopButton.classList.remove('buy-basket--active');
-  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -160,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const basketText = document.querySelector('.basket-text');
 
   function updateBasketText() {
-    const items = basketList.querySelectorAll('li.basket-item'); // <-- исправили тут!
+    const items = basketList.querySelectorAll('li.basket-item');
     const count = items.length;
   
     if (count === 0) {
@@ -257,5 +234,107 @@ document.addEventListener("DOMContentLoaded", function () {
       icon.style.backgroundColor = 'rgb(31, 31, 31)';
     }
   });
+
+  // Логика из product.js для кнопки добавления в корзину на странице товара
+
+let productButton = document.querySelector(".product-add-basket");
+if (productButton) {
+  const productName = document.querySelector(".product-name")?.textContent;
+  const productPrice = document.querySelector(".product-price")?.textContent;
+  const productImage = document.querySelector(".product-photo")?.src;
+
+  const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  const isInCart = savedItems.some(item => item.name === productName);
+
+  if (isInCart) {
+    productButton.style.backgroundColor = 'rgb(57, 177, 57)';
+    productButton.textContent = "В КОРЗИНЕ";
+  }
+
+  productButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const background = window.getComputedStyle(productButton).backgroundColor;
+    const isAdded = background === 'rgb(57, 177, 57)';
+    
+    if (!isAdded) {
+      productButton.style.backgroundColor = 'rgb(57, 177, 57)';
+      productButton.textContent = "В КОРЗИНЕ";
+      addItemToBasket(productName, productPrice, productImage);
+    } else {
+      productButton.style.backgroundColor = 'rgb(0, 0, 0)';
+      productButton.textContent = "ДОБАВИТЬ В КОРЗИНУ";
+      removeItemFromBasket(productName);
+    }
+
+    updateBasketText();
+    saveCartToStorage();
+  });
+}
+
+  document.querySelectorAll('.li-icon-shop').forEach(button => { 
+    button.addEventListener('click', (e) => { 
+      e.preventDefault();
+      e.stopPropagation();
+      
+      let backColor = window.getComputedStyle(button).backgroundColor;
+  
+      if (backColor === 'rgb(31, 31, 31)') {
+        button.style.backgroundColor = 'rgb(57, 177, 57)';
+      } else {
+        button.style.backgroundColor = 'rgb(31, 31, 31)';
+      }
+    });
+  });
+
+  document.querySelectorAll('.li-icon-shop').forEach(button => { 
+    button.addEventListener('click', (e) => { 
+      e.preventDefault();
+      e.stopPropagation();
+      
+      let backColor = window.getComputedStyle(button).backgroundColor;
+  
+      if (backColor === 'rgb(31, 31, 31)') {
+        button.style.backgroundColor = 'rgb(57, 177, 57)';
+      } else {
+        button.style.backgroundColor = 'rgb(31, 31, 31)';
+      }
+    });
+  });
+
+  // СЛАЙДРЕ ДЛЯ ВЫБАННОГО ТОВАРА 
+  
+    const otherUl = document.querySelector('.other-items');
+    const otherLi = document.querySelectorAll('.other-list');
+    const sliderNext = document.querySelector('.slider-button-next-other');
+    const sliderBack = document.querySelector('.slider-button-back-other');
+
+    let slideCart = 0;
+    const itemWidth = otherLi[0].offsetWidth + 20;
+    const visibleItems = Math.floor(otherUl.offsetWidth / itemWidth);
+    const maxSlide = (otherLi.length - visibleItems) * itemWidth;
+
+    sliderNext.addEventListener('click', () => { 
+
+        if (slideCart < maxSlide) {
+            slideCart += itemWidth;
+            if (slideCart > maxSlide) { 
+                slideCart = maxSlide;
+            }
+            otherUl.style.transform = `translate(-${slideCart}px)`;
+        }
+    });
+
+    sliderBack.addEventListener('click', () => { 
+        
+        if(slideCart > 0) { 
+            slideCart -= itemWidth;
+            if (slideCart < 0) { 
+                slideCart = 0;
+            }
+            otherUl.style.transform = `translate(-${slideCart}px)`;
+        }
+    });
 });
+
 

@@ -129,17 +129,6 @@
         transform: translateX(0%);
     }
 
-    .basket-text-underfind.basket-text-underfind--active {
-        display: block;
-    }
-
-    .basket-text.basket-text--active,
-    .basket-list.basket-list--active,
-    .basket-item.basket-item--active,
-    .buy-basket.buy-basket--avtive {
-        display: block;
-    }
-
     .basket-div {
         padding: 20px;
         position: relative;

@@ -34,6 +34,7 @@ if ($id) {
     <link rel="stylesheet" href="../style/product.css">
     <link rel="stylesheet" href="../style/main-pages.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/catalog.css">
     <title>Rizo Store</title>
     <title>Rizo Store</title>
 </head>
@@ -150,7 +151,6 @@ if ($id) {
         </div>
     </section>
 
-    <script src="../js/product.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
