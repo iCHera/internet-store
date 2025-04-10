@@ -242,7 +242,7 @@
         letter-spacing: 2px;
     }
 
-    .li-icon-shop-other {
+    .li-icon-shop- {
         width: 25px;
         height: 25px;
         margin-top: -25px;
@@ -256,7 +256,7 @@
         border-radius: 50%;
     }
 
-    .other-list:hover .li-icon-shop-other {
+    .other-list:hover .li-icon-shop {
         opacity: 1;
     }
 

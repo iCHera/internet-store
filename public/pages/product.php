@@ -67,23 +67,12 @@ if ($id) {
         <div class="basket">
             <div class="basket-div">
                 <div class="span-point">
-                    <span ></span>
+                    <span></span>
                     <span></span>
                 </div>
-                <h1 class="basket-text-underfind">пока ничего нету</h1>
-                <h1 class="basket-text">asdad</h1>
+                <h1 class="basket-text-underfind"></h1>
+                <h1 class="basket-text"></h1>
                 <ul class="basket-list">
-                    <? foreach ($data as $product): ?>
-                        <li class="basket-item">
-                            <div class="basket-item">
-                                <img src="<?= $data['image'] ?>" alt="photo">
-                            </div>
-                            <div class="basket-product">
-                                <h1 class="basket-name"><?= $data['name'] ?></h1>
-                                <h1 class="basket-price"><?= $data['price'] ?></h1>
-                            </div>
-                        </li>
-                    <?php endforeach; ?>
                 </ul>
                 <button class="buy-basket">ОФОРМНИТЬ ЗАКАЗ</button>
             </div>
@@ -148,7 +137,9 @@ if ($id) {
                     <li class="other-list">
                         <a href="product.php?id=<?= $data['id'] ?>" class="other-items-text">
                             <img src="<?php echo $data['image']; ?>" alt="photo" class="other-photo">
-                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop-other">
+                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                             <h1 class="other-name"><?php echo $data['name']; ?></h1>
                             <p class="other-description"><?php echo $data['shortDescription']; ?></p>
                             <p class="other-price"><?= $data['price'] ?> <span class="other-price-span">BYN</span></p>
@@ -160,6 +151,7 @@ if ($id) {
     </section>
 
     <script src="../js/product.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

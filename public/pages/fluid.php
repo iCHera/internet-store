@@ -50,6 +50,19 @@ if ($query = $db->query("SELECT * FROM `goods` WHERE catalog = 'fluid'")) {
                 </li>
             </ul>
         </div>
+        <div class="basket">
+            <div class="basket-div">
+                <div class="span-point">
+                    <span></span>
+                    <span></span>
+                </div>
+                <h1 class="basket-text-underfind"></h1>
+                <h1 class="basket-text"></h1>
+                <ul class="basket-list">
+                </ul>
+                <button class="buy-basket">ОФОРМНИТЬ ЗАКАЗ</button>
+            </div>
+        </div>
     </header>
 
     <section class="section-goods catalog">
@@ -59,7 +72,9 @@ if ($query = $db->query("SELECT * FROM `goods` WHERE catalog = 'fluid'")) {
                     <li class="goods-list">
                         <a href="product.php?id=<?= $data['id'] ?>" class="goods-items-text">
                             <img src="<?php echo $data['image']; ?>" alt="photo" class="goods-photo">
-                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                            <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                             <h1 class="goods-name"><?php echo $data['name']; ?></h1>
                             <p class="goods-description"><?php echo $data['shortDescription']; ?></p>
                             <p class="goods-price"><?= $data['price'] ?> BYN</p>

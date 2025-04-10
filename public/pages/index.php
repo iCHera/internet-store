@@ -79,23 +79,12 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
         <div class="basket">
             <div class="basket-div">
                 <div class="span-point">
-                    <span ></span>
+                    <span></span>
                     <span></span>
                 </div>
-                <h1 class="basket-text-underfind">пока ничего нету</h1>
-                <h1 class="basket-text">asdad</h1>
+                <h1 class="basket-text-underfind"></h1>
+                <h1 class="basket-text"></h1>
                 <ul class="basket-list">
-                    <? foreach ($data as $product): ?>
-                        <li class="basket-item">
-                            <div class="basket-item">
-                                <img src="<?= $data['image'] ?>" alt="photo">
-                            </div>
-                            <div class="basket-product">
-                                <h1 class="basket-name"><?= $data['name'] ?></h1>
-                                <h1 class="basket-price"><?= $data['price'] ?></h1>
-                            </div>
-                        </li>
-                    <?php endforeach; ?>
                 </ul>
                 <button class="buy-basket">ОФОРМНИТЬ ЗАКАЗ</button>
             </div>
@@ -198,7 +187,9 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                         <li class="new-list">
                             <a href="product.php?id=<?= $data['id'] ?>" class="new-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="new-photo">
-                                <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                 <h1 class="new-name"><?php echo $data['name']; ?></h1>
                                 <p class="new-description"><?php echo $data['shortDescription']; ?></p>
                                 <p class="new-price"><?= $data['price'] ?> <span class="new-price-span">BYN</span></p>
@@ -235,7 +226,9 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                         <li class="xite-list">
                             <a href="product.php?id=<?= $data['id'] ?>" class="xite-items-text">
                                 <img src="<?php echo $data['image']; ?>" alt="photo" class="xite-photo">
-                                <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                 <h1 class="xite-name"><?php echo $data['name']; ?></h1>
                                 <p class="xite-description"><?php echo $data['shortDescription']; ?></p>
                                 <p class="xite-price"><?= $data['price'] ?> <span class="xite-price-span">BYN</span></p>
@@ -270,7 +263,9 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                             <li class="seri-pdocuct-li">
                                 <a href="product.php?id=<?= $data['id'] ?>" class="seri-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
-                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                     <h1 class="seri-name"><?php echo $data['name']; ?></h1>
                                     <p class="seri-description"><?php echo $data['shortDescription']; ?></p>
                                 </a>
@@ -308,7 +303,9 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                             <li class="tefia-pdocuct-li">
                                 <a href="product.php?id=<?= $data['id'] ?>" class="tefia-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="tefia-photo">
-                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop">
+                                    <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
+                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                     <h1 class="tefia-name"><?php echo $data['name']; ?></h1>
                                     <p class="tefia-description"><?php echo $data['shortDescription']; ?></p>
                                 </a>

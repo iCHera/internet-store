@@ -1,21 +1,3 @@
-document.querySelectorAll('.li-icon-shop').forEach(button => { 
-  button.addEventListener('click', () => { 
-    let backColor = window.getComputedStyle(button).backgroundColor;
-
-    if (backColor === 'rgb(31, 31, 31)') button.style.backgroundColor = 'rgb(57, 177, 57)';
-    else button.style.backgroundColor = 'rgb(31, 31, 31)';
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".li-icon-shop").forEach(function (icon) {
-      icon.addEventListener("click", function (event) {
-          event.stopPropagation();
-          event.preventDefault(); 
-      });
-  }); 
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   const newItems = document.querySelector('.new-items');
   const newLists = document.querySelectorAll('.new-list');
@@ -167,9 +149,113 @@ document.addEventListener("DOMContentLoaded", function() {
     textIsunderFind.classList.remove('basket-text-underfind--active');
     textIsFind.classList.remove('basket-text--active');
     shopListUl.classList.remove('basket-list--active');
-    shopListLi.classList.remove('basket-item--active');
+    // shopListLi.classList.remove('basket-item--active');
     ShopButton.classList.remove('buy-basket--active');
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const basketList = document.querySelector('.basket-list');
+  const emptyText = document.querySelector('.basket-text-underfind');
+  const basketText = document.querySelector('.basket-text');
+
+  function updateBasketText() {
+    const items = basketList.querySelectorAll('li.basket-item'); // <-- исправили тут!
+    const count = items.length;
+  
+    if (count === 0) {
+      basketText.style.display = 'none';
+      if (emptyText) { 
+        emptyText.style.display = 'flex';
+        emptyText.textContent = 'Корзина пуста';
+      } 
+    } else {
+      basketText.style.display = 'flex';
+      basketText.textContent = `В корзине ${count} товар${count === 1 ? '' : count < 5 ? 'а' : 'ов'}`;
+      if (emptyText) emptyText.style.display = 'none';
+    }
+  }
+  
+
+  function saveCartToStorage() {
+    const items = Array.from(basketList.children).map(item => ({
+      name: item.querySelector('.basket-name')?.textContent,
+      price: item.querySelector('.basket-price')?.textContent,
+      image: item.querySelector('img')?.src,
+    }));
+    localStorage.setItem('cartItems', JSON.stringify(items));
+  }
+
+  function loadCartFromStorage() {
+    const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    savedItems.forEach(item => {
+      addItemToBasket(item.name, item.price, item.image);
+    });
+    updateBasketText();
+  }
+
+  function addItemToBasket(name, price, image) {
+    
+    if (!name || !price || !image) return;
+
+    const li = document.createElement('li');
+    li.classList.add('basket-item');
+    li.setAttribute('data-id', name); 
+    li.innerHTML = `
+      <div class="basket-item">
+          <img src="${image}" alt="photo" class="basket-image">
+      </div>
+      <div class="basket-product">
+          <h1 class="basket-name">${name}</h1>
+          <h1 class="basket-price">${price}</h1>
+      </div>
+    `;
+    basketList.appendChild(li);
+  }
+
+  function removeItemFromBasket(name) {
+    const items = basketList.querySelectorAll('.basket-item');
+    items.forEach(item => {
+      const itemName = item.querySelector('.basket-name')?.textContent;
+      if (itemName === name) {
+        item.remove();
+      }
+    });
+  }
+
+  loadCartFromStorage();
+
+  document.querySelectorAll(".li-icon-shop").forEach(function (icon) {
+    icon.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const name = icon.dataset.name;
+      const price = icon.dataset.price;
+      const image = icon.dataset.image;
+
+      const isAdded = icon.classList.toggle("active");
+
+      if (isAdded) {
+        icon.style.backgroundColor = 'rgb(57, 177, 57)';
+        addItemToBasket(name, price, image);
+      } else {
+        icon.style.backgroundColor = 'rgb(31, 31, 31)';
+        removeItemFromBasket(name);
+      }
+
+      updateBasketText();
+      saveCartToStorage();
+    });
+
+    const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const itemInCart = savedItems.find(i => i.name === icon.dataset.name);
+    if (itemInCart) {
+      icon.classList.add("active");
+      icon.style.backgroundColor = 'rgb(57, 177, 57)';
+    } else {
+      icon.style.backgroundColor = 'rgb(31, 31, 31)';
+    }
+  });
+});
 

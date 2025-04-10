@@ -185,15 +185,46 @@
         display: none;
     }
 
-    .basket-list {}
+    .basket-list {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-    .basket-item {}
+    .basket-item{ 
+        display: flex;
+        gap: 20px;
+    }
 
-    .basket-product {}
+    .basket-item-photo{
+    }
 
-    .basket-name {}
+    .basket-image{ 
+        width: 150px;
+        height: 150px;
+    }
 
-    .basket-price {}
+    .basket-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .basket-name {
+        font-family: GraphikLCG;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 120%;
+    }
+
+    .basket-price {
+        font-family: gteestiprodisplay;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
 
     .buy-basket {
         display: none;
@@ -1208,6 +1239,20 @@
 
     .header-photo-button {
         font-size: 12px;
+    }
+
+    /* NEW PRODUCT */
+
+    .section-new, .section-xite{ 
+        padding: 0;
+    }
+
+    .new-div, .xite-div { 
+        padding-left: 5px;
+    }
+
+    .new-items, .xite-items{ 
+        padding: 5px 10px 20px 0px ;
     }
 
     /* SECTION SERI */
