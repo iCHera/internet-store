@@ -1,3 +1,5 @@
+// === Слайдер "Новинки" ===
+
 document.addEventListener('DOMContentLoaded', function() {
   const newItems = document.querySelector('.new-items');
   const newLists = document.querySelectorAll('.new-list');
@@ -22,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// === Слайдер "Хиты продаж" ===
 
 document.addEventListener('DOMContentLoaded', function() { 
 
@@ -48,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// === Слайдер "SERI продуктов" ===
 
 document.addEventListener("DOMContentLoaded", function() { 
   const seriProductUl = document.querySelector('.seri-product-ul');
@@ -80,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+// === Слайдер "Tefia продукты" ===
 
 document.addEventListener("DOMContentLoaded", function() { 
 
@@ -114,6 +122,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// === Открытие и закрытие корзины по клику ===
+
 document.addEventListener("DOMContentLoaded", function() {
 
   const shopListButton = document.querySelector('.header-list-li-shop');
@@ -131,10 +141,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// === Работа с корзиной (отображение, добавление, удаление, сохранение в localStorage) ===
+
 document.addEventListener("DOMContentLoaded", function () {
   const basketList = document.querySelector('.basket-list');
   const emptyText = document.querySelector('.basket-text-underfind');
   const basketText = document.querySelector('.basket-text');
+
+  // Обновление текста "В корзине N товаров"
 
   function updateBasketText() {
     const items = basketList.querySelectorAll('li.basket-item');
@@ -153,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
-
+   // Сохранение корзины в localStorage
   function saveCartToStorage() {
     const items = Array.from(basketList.children).map(item => ({
       name: item.querySelector('.basket-name')?.textContent,
@@ -163,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem('cartItems', JSON.stringify(items));
   }
 
+  // Загрузка товаров из localStorage
   function loadCartFromStorage() {
     const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
     savedItems.forEach(item => {
@@ -171,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateBasketText();
   }
 
+  // Добавление товара в корзину
   function addItemToBasket(name, price, image) {
     
     if (!name || !price || !image) return;
@@ -190,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
     basketList.appendChild(li);
   }
 
+  // Удаление товара из корзины
   function removeItemFromBasket(name) {
     const items = basketList.querySelectorAll('.basket-item');
     items.forEach(item => {
@@ -200,8 +217,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Загрузка корзины при загрузке страницы
   loadCartFromStorage();
 
+  // === Добавление товара в корзину с карточки (иконка корзины) ===
   document.querySelectorAll(".li-icon-shop").forEach(function (icon) {
     icon.addEventListener("click", function (e) {
       e.preventDefault();
@@ -235,24 +254,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Логика из product.js для кнопки добавления в корзину на странице товара
+  // === Кнопка "Добавить в корзину" на странице товара ===
+  let productButton = document.querySelector(".product-add-basket");
+  if (productButton) {
+    const productName = document.querySelector(".product-name")?.textContent;
+    const productPrice = document.querySelector(".product-price")?.textContent;
+    const productImage = document.querySelector(".product-photo")?.src;
 
-let productButton = document.querySelector(".product-add-basket");
-if (productButton) {
-  const productName = document.querySelector(".product-name")?.textContent;
-  const productPrice = document.querySelector(".product-price")?.textContent;
-  const productImage = document.querySelector(".product-photo")?.src;
+    const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const isInCart = savedItems.some(item => item.name === productName);
 
-  const savedItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
-  const isInCart = savedItems.some(item => item.name === productName);
+    if (isInCart) {
+      productButton.style.backgroundColor = 'rgb(57, 177, 57)';
+      productButton.textContent = "В КОРЗИНЕ";
+    }
 
-  if (isInCart) {
-    productButton.style.backgroundColor = 'rgb(57, 177, 57)';
-    productButton.textContent = "В КОРЗИНЕ";
-  }
-
-  productButton.addEventListener('click', function(e) {
-    e.preventDefault();
+    productButton.addEventListener('click', function(e) {
+      e.preventDefault();
     
     const background = window.getComputedStyle(productButton).backgroundColor;
     const isAdded = background === 'rgb(57, 177, 57)';
@@ -272,6 +290,7 @@ if (productButton) {
   });
 }
 
+  // === Переключения фона у иконки товара  ===
   document.querySelectorAll('.li-icon-shop').forEach(button => { 
     button.addEventListener('click', (e) => { 
       e.preventDefault();
@@ -287,23 +306,7 @@ if (productButton) {
     });
   });
 
-  document.querySelectorAll('.li-icon-shop').forEach(button => { 
-    button.addEventListener('click', (e) => { 
-      e.preventDefault();
-      e.stopPropagation();
-      
-      let backColor = window.getComputedStyle(button).backgroundColor;
-  
-      if (backColor === 'rgb(31, 31, 31)') {
-        button.style.backgroundColor = 'rgb(57, 177, 57)';
-      } else {
-        button.style.backgroundColor = 'rgb(31, 31, 31)';
-      }
-    });
-  });
-
-  // СЛАЙДРЕ ДЛЯ ВЫБАННОГО ТОВАРА 
-  
+  // === Слайдер "С выбраным товаром" на странице товара ===
     const otherUl = document.querySelector('.other-items');
     const otherLi = document.querySelectorAll('.other-list');
     const sliderNext = document.querySelector('.slider-button-next-other');
