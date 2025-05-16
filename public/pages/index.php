@@ -264,8 +264,8 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                                 <a href="product.php?id=<?= $data['id'] ?>" class="seri-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="seri-photo">
                                     <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
-                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
-                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
+                                        data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                        data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                     <h1 class="seri-name"><?php echo $data['name']; ?></h1>
                                     <p class="seri-description"><?php echo $data['shortDescription']; ?></p>
                                 </a>
@@ -304,8 +304,8 @@ if ($tefia = $db->query("SELECT * FROM `goods` WHERE brand = 'Tefia'")) {
                                 <a href="product.php?id=<?= $data['id'] ?>" class="tefia-items-text">
                                     <img src="<?php echo $data['image']; ?>" alt="photo" class="tefia-photo">
                                     <img src="/image/header/icon-white.png" alt="icon" class="li-icon-shop"
-                                    data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
-                                    data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
+                                        data-id="<?= $data['id'] ?>" data-name="<?= $data['name'] ?>"
+                                        data-price="<?= $data['price'] ?>" data-image="<?= $data['image'] ?>">
                                     <h1 class="tefia-name"><?php echo $data['name']; ?></h1>
                                     <p class="tefia-description"><?php echo $data['shortDescription']; ?></p>
                                 </a>
